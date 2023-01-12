@@ -59,6 +59,8 @@ a {
 }
 
 .first-section {
+  display: flex;
+  flex-direction: column;
   background-image: url("./Images//mobile-bg.svg");
   background-repeat: no-repeat;
   height: 648px;

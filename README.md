@@ -144,45 +144,6 @@ Example command:
 ```sh
   code .
 ```
-<!-- 
-### Usage -->
-
-<!-- To run the project, execute the following command: -->
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-<!-- ### Run tests -->
-
-<!-- To run tests, run the following command: -->
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-<!-- 
-### Deployment -->
-<!-- 
-You can deploy this project using: -->
-
-<!--
-Example:
-
-```sh
-
-```
- -->
-
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
@@ -191,7 +152,6 @@ Example:
 
 - GitHub: [@githubhandle](https://github.com/danutibe07)
 - Twitter: [@twitterhandle](https://twitter.com/Danielutibe07?t=2kvKPTZQ7IGCw2FugE9xCQ&s=09)
-<!-- - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -201,9 +161,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[Access_to_Other_Projects]**
+- [ ] **[Content]**
+- [ ] **[Live_Project_Demo]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -238,9 +198,31 @@ I would like to thank my coding partners and microverse
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
-<!-- 
+
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-<!-- 
-> Add at least 2 questions new developers would ask when they decide to use your project. -->
-<!-- 
-- **[Question_1]**l
+> Add at least 2 questions new developers would ask when they decide to use your project.
+- **[RESOURCES_used_for_writing_this_project]**
+```sh
+ HTML
+```
+```sh
+ CSS
+```
+```sh
+ JAVASCRIPT
+```
+```sh
+ GIT & GITHUB
+```
+```sh
+    LINTERS
+```
+- **[Tools_Used_for_this_project]**
+```sh
+ VS CODE
+```
+```sh
+ GOOGLE CHROME
+```
+
+
