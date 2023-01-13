@@ -29,8 +29,7 @@
 
     <section class="first-section">
       <div class="container">
-        <h1>Hey there. I’m Daniel</h1>
-        <h1 class="desc">I’m a software developer</h1>
+        <h1>Hey there. I’m Daniel <br> <span class="desc">I’m a software developer</span> </h1>
         <p>
           I can help you build a product , feature or website Look through some
           of my work and experience! If you like what you see and have a project
@@ -55,16 +54,30 @@
         </ul>
       </div>
     </section>
-    <button><img src="./Images//disabled.svg" alt="" /></button>
+    <button ><img class="down-icon" src="./Images//disabled.svg" alt="" /></button>
     <section class="second-section">
       <div class="container">
-        <h1 class="recent-header">My Recent Works</h1>
-        <hr />
+        <h2 class="recent-header">My Recent Works</h2>
+        <!-- <hr /> -->
         <div class="boxes">
           <div class="box">
             <div></div>
             <div class="box-menu">
-              <h1 class="title">Multi-Post Stories Gain+Glory</h1>
+              <h2 class="title">Multi-Post Stories <br>  Gain+Glory</h2>
+              <ul class="box-list">
+                <li class="box-list-item">Ruby on rails</li>
+                <li class="box-list-item">css</li>
+                <li class="box-list-item">Javascript</li>
+                <li class="box-list-item">html</li>
+              </ul>
+              <div><button class="box-button">See Project</button></div>
+            </div>
+          </div>
+          <div class="box">
+            <div></div>
+            <div class="box-menu">
+             <h2 class="title">Multi-Post Stories <br>  Gain+Glory</h2>
+
               <ul class="box-list">
                 <li class="box-list-item">Ruby on rails</li>
                 <li class="box-list-item">css</li>
@@ -77,7 +90,8 @@
           <div class="box">
             <div></div>
             <div class="box-menu">
-              <h1 class="title">Multi-Post Stories Gain+Glory</h1>
+             <h2 class="title">Multi-Post Stories <br>  Gain+Glory</h2>
+
               <ul class="box-list">
                 <li class="box-list-item">Ruby on rails</li>
                 <li class="box-list-item">css</li>
@@ -90,7 +104,8 @@
           <div class="box">
             <div></div>
             <div class="box-menu">
-              <h1 class="title">Multi-Post Stories Gain+Glory</h1>
+             <h2 class="title">Multi-Post Stories <br>  Gain+Glory</h2>
+
               <ul class="box-list">
                 <li class="box-list-item">Ruby on rails</li>
                 <li class="box-list-item">css</li>
@@ -103,7 +118,8 @@
           <div class="box">
             <div></div>
             <div class="box-menu">
-              <h1 class="title">Multi-Post Stories Gain+Glory</h1>
+             <h2 class="title">Multi-Post Stories <br>  Gain+Glory</h2>
+
               <ul class="box-list">
                 <li class="box-list-item">Ruby on rails</li>
                 <li class="box-list-item">css</li>
@@ -116,20 +132,7 @@
           <div class="box">
             <div></div>
             <div class="box-menu">
-              <h1 class="title">Multi-Post Stories Gain+Glory</h1>
-              <ul class="box-list">
-                <li class="box-list-item">Ruby on rails</li>
-                <li class="box-list-item">css</li>
-                <li class="box-list-item">Javascript</li>
-                <li class="box-list-item">html</li>
-              </ul>
-              <button class="box-button">See Project</button>
-            </div>
-          </div>
-          <div class="box">
-            <div></div>
-            <div class="box-menu">
-              <h1 class="title">Multi-Post Stories Gain+Glory</h1>
+              <h2 class="title">Multi-Post Stories Gain+Glory</h1>
               <ul class="box-list">
                 <li class="box-list-item">Ruby on rails</li>
                 <li class="box-list-item">css</li>
@@ -144,6 +147,8 @@
     </section>
     <section class="third-section">
       <div class="container">
+        <img class="frameleft" src="./Images/frameleft.svg" alt="">
+        <img class="frameright" src="./Images/frameright.svg" alt="">
         <h1>About Me</h1>
         <p class="about-desc">
           I can help you build a product , feature or website Look through some
@@ -152,8 +157,8 @@
         </p>
         <button class="box-button about-btn">Get My Resume</button>
       </div>
-      <div class="boxes">
-        <div class="about-box">
+      <ul class="boxes">
+        <li class="about-box">
           <div><img class="about-img" src="./Images/icon1.svg" alt="" /></div>
           <div class="about-menu">
             <h1 class="about-title">Languages</h1>
@@ -164,8 +169,8 @@
               <li class="about-list-item">CSS</li>
             </ul>
           </div>
-        </div>
-        <div class="about-box">
+        </li>
+        <li class="about-box">
           <div><img class="about-img" src="./Images/icon2.svg" alt="" /></div>
           <div class="about-menu">
             <h1 class="about-title">Frameworks</h1>
@@ -177,8 +182,8 @@
               <li class="about-list-item">Selenium</li>
             </ul>
           </div>
-        </div>
-        <div class="about-box">
+        </li>
+        <li class="about-box">
           <div><img class="about-img" src="./Images/icon3.svg" alt="" /></div>
           <div class="about-menu">
             <h1 class="about-title">Skills</h1>
@@ -190,13 +195,13 @@
               <li class="about-list-item">Terminal</li>
             </ul>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
     <section class="fourth-section">
         <div class="container">
             <div class="contact">
-                <div><h1>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h1></div>
+                <div><h2>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h1></div>
                 <form id="form" action="/">
                     <div class="input-control">
                         <input id="fullname" name="fullname" type="text" placeholder="Fullname">
@@ -228,6 +233,7 @@
                           <a href="#"><img src="./Images//angellist.svg" alt="" /></a>
                         </li>
                       </ul>
+                      <h4>danielutibe07@gmail.com</h5>
                 </form>
             </div>
         </div>
