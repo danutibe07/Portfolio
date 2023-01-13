@@ -67,11 +67,11 @@ a {
   width: 100%;
 }
 
-.container :nth-child(1) {
+.first-section .container :nth-child(1) {
   color: #172b4d;
 }
 
-.container :nth-child(2) {
+.first-section .container :nth-child(2) {
   color: #36b37e;
 }
 
@@ -116,6 +116,7 @@ button {
   line-height: 52px;
   letter-spacing: 0.05em;
   text-align: center;
+  color: #172b4d;
 }
 
 .second-section hr {
@@ -127,6 +128,229 @@ button {
   margin-top: 8%;
 }
 
+/* boxes */
+.boxes {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  margin-top: 25px;
+  gap: 2em;
+}
+
+.box {
+  height: 474px;
+  width: 327px;
+  background-color: #d0d9d4;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-between;
+}
+
+.box-menu {
+  background-color: #fff;
+  height: 230px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.box-menu h1 {
+  width: 295px;
+  height: 57px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.box-list {
+  display: flex;
+  flex-direction: row;
+  margin: 27px;
+  gap: 5px;
+}
+
+.box-list-item {
+  background-color: #d0d9d4;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.box-button {
+  color: #fff;
+  background: #36b37f;
+  width: 122px;
+  height: 48px;
+  margin-top: 7px;
+  border-radius: 5px;
+}
+
+.third-section .container {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.about-menu {
+  padding-bottom: 50px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-desc {
+  width: 351px;
+  height: 189px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #42526e;
+  padding-top: 25px;
+  align-self: center;
+}
+
+.about-btn {
+  align-self: center;
+  margin-top: 40px;
+}
+
+.about-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  align-self: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-list-item {
+  background-color: #fff;
+  color: #36b37f;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.about-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #d0d9d4;
+  align-self: center;
+  height: 300px;
+  width: 327px;
+  border-radius: 8px;
+  justify-content: space-evenly;
+  align-self: center;
+  text-align: center;
+}
+
+.about-img {
+  width: 100px;
+  height: 100px;
+  margin-top: 80px;
+}
+
+.about-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+  width: 100%;
+  height: 48px;
+  align-self: center;
+  text-align: center;
+  color: #172b4d;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.contact h1 {
+  height: 363px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #172b4d;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  width: 300px;
+  margin: 5vh auto 0 auto;
+}
+
+#form {
+  width: 300px;
+  margin: 5vh auto 0 auto;
+  padding: 20px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+#form h1 {
+  color: #0f2027;
+  text-align: center;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+}
+
+.input-control textarea {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+  height: 114px;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+#form .social{
+  padding-left: 45px;
+}
 @media (max-width: 768px) {
   .navbar {
     position: fixed;
