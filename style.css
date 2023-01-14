@@ -98,6 +98,7 @@ a {
   text-align: center;
   align-self: center;
 }
+
 .container {
   display: grid;
 }
@@ -309,7 +310,7 @@ button {
   justify-content: space-evenly;
   text-align: center;
   margin: 0 auto;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0.1px 3px 12px;
 }
 
 .about-img {
@@ -502,7 +503,6 @@ button {
   .first-section .container {
     padding-top: 100px;
     padding-bottom: 100px;
-    /* background-image: url("./Images/desktopbg.svg"); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -532,7 +532,6 @@ button {
     left: 0;
     top: 250px;
     overflow: hidden;
-    overflow: hidden;
     display: inline-block;
   }
 
@@ -545,6 +544,7 @@ button {
     overflow: hidden;
     display: inline-block;
   }
+
   .framecontact {
     position: absolute;
     width: 130px;
@@ -554,7 +554,8 @@ button {
     overflow: hidden;
     display: inline-block;
   }
-  .contact{
+
+  .contact {
     position: relative;
     padding-left: 80px;
     padding-right: 80px;
