@@ -184,7 +184,7 @@ button {
 
 .box {
   height: 474px;
-  width: 100%;
+  /* width: 100%; */
   background-color: #d0d9d4;
   border-radius: 12px;
   display: flex;
@@ -192,6 +192,7 @@ button {
   align-self: center;
   justify-content: space-between;
   margin: 0 auto;
+  min-width: 327px
 }
 
 .box-menu {
@@ -216,9 +217,9 @@ button {
 
 .box-list-item {
   background-color: #d0d9d4;
-  padding: 3px;
-  border-radius: 3px;
+  padding: 7px;
   font-size: 12px;
+  border-radius: 8px;
 }
 
 .box-button {
@@ -291,26 +292,28 @@ button {
 .about-list-item {
   background-color: #fff;
   color: #36b37f;
-  padding: 3px;
-  border-radius: 3px;
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
+  padding: 12px;
+  border-radius: 8px;
 }
 
 .about-box {
   display: flex;
   flex-direction: column;
-  background-color: #d0d9d4;
+  background: #EBF0EE;
   align-self: center;
-  height: 300px;
-  width: 327px;
+  /* height: 300px;
+  width: 327px; */
   border-radius: 8px;
   justify-content: space-evenly;
   text-align: center;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.09) 0.1px 3px 12px;
+  min-width: 327px;
+  min-height: 352px; 
 }
 
 .about-img {
