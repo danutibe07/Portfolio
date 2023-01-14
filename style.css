@@ -184,7 +184,6 @@ button {
 
 .box {
   height: 474px;
-  /* width: 100%; */
   background-color: #d0d9d4;
   border-radius: 12px;
   display: flex;
@@ -192,7 +191,7 @@ button {
   align-self: center;
   justify-content: space-between;
   margin: 0 auto;
-  min-width: 327px
+  min-width: 327px;
 }
 
 .box-menu {
@@ -303,17 +302,15 @@ button {
 .about-box {
   display: flex;
   flex-direction: column;
-  background: #EBF0EE;
+  background: #ebf0ee;
   align-self: center;
-  /* height: 300px;
-  width: 327px; */
   border-radius: 8px;
   justify-content: space-evenly;
   text-align: center;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.09) 0.1px 3px 12px;
   min-width: 327px;
-  min-height: 352px; 
+  min-height: 352px;
 }
 
 .about-img {
