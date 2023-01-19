@@ -6,6 +6,8 @@
   padding: 0;
 }
 
+/* outline: 1px solid red; */
+
 body {
   margin: 0;
   padding: 0;
@@ -13,6 +15,7 @@ body {
   text-decoration: none;
   color: #172b4d;
   background: #e5e5e5;
+  overflow-x: hidden;
 }
 
 main {
@@ -20,6 +23,7 @@ main {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  overflow-x: hidden;
 }
 
 header {
@@ -457,6 +461,7 @@ article h1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-top: 50px;
   }
 
   #contact {
@@ -479,6 +484,7 @@ article h1 {
 
   header {
     display: block;
+    background-color: #e5e5e5;
   }
 
   #first .menu {
