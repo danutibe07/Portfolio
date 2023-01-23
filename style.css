@@ -335,7 +335,7 @@ article h1 {
 
 #form {
   border-radius: 4px;
-  margin-top: 45px ;
+  margin-top: 45px;
   font-size: 12px;
   display: grid;
   justify-items: center;
@@ -366,8 +366,8 @@ article h1 {
 }
 
 .input-control textarea:hover,
-.input-control input:hover{
-  border: 1px solid #60C095;
+.input-control input:hover {
+  border: 1px solid #60c095;
 }
 
 .input-control input:focus {
@@ -399,7 +399,7 @@ article h1 {
   overflow-x: hidden;
 }
 
-#form button{
+#form button {
   text-align: center;
   justify-content: center;
   align-self: center;
@@ -418,9 +418,10 @@ article h1 {
   width: 327px;
 }
 
-#contact .social{
+#contact .social {
   margin-top: 30px;
 }
+
 @media screen and (max-width: 2000px) {
   #first {
     background-image: url("./Images/desktopviewbg.svg");
@@ -428,18 +429,21 @@ article h1 {
     background-size: cover;
     background-position: center;
   }
+
   .about-content {
     display: grid;
     justify-items: center;
   }
+
   #contact {
     display: flex;
     flex-direction: column;
     position: relative;
-}
-#contact .social{
-  display: none;
-}
+  }
+
+  #contact .social {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 910px) {
@@ -568,7 +572,8 @@ article h1 {
     padding-top: 20px;
     padding-left: 30px;
   }
-  #contact .social{
+
+  #contact .social {
     display: block;
   }
 }
