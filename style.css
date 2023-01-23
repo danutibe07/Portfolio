@@ -430,7 +430,8 @@ article h1 {
     background-size: cover;
     background-position: center;
   }
-  .emailaddress{
+
+  .emailaddress {
     display: none;
   }
 
@@ -583,7 +584,8 @@ article h1 {
   #contact .social {
     display: flex;
   }
-  .emailaddress{
+
+  .emailaddress {
     display: grid;
     color: #e5e5e5;
     background-color: #36b37e;
