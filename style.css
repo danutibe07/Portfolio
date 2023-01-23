@@ -574,6 +574,6 @@ article h1 {
   }
 
   #contact .social {
-    display: block;
+    display: flex;
   }
 }
