@@ -410,12 +410,13 @@ article h1 {
 }
 
 .contact-h2 {
-  font-size: 45px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 52px;
   text-align: center;
   height: 363px;
-  width: 327px;
+  width: 450px;
+  padding-top: 50px;
 }
 
 #contact .social {
@@ -429,6 +430,9 @@ article h1 {
     background-size: cover;
     background-position: center;
   }
+  .emailaddress{
+    display: none;
+  }
 
   .about-content {
     display: grid;
@@ -437,8 +441,11 @@ article h1 {
 
   #contact {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 100px;
   }
 
   #contact .social {
@@ -575,5 +582,14 @@ article h1 {
 
   #contact .social {
     display: flex;
+  }
+  .emailaddress{
+    display: grid;
+    color: #e5e5e5;
+    background-color: #36b37e;
+    padding: 15px;
+    width: 327px;
+    margin-top: 15px;
+    border-radius: 5px;
   }
 }
