@@ -352,7 +352,6 @@ article h1 {
   display: block;
   font-size: 15px;
   padding: 10px;
-  width: 327px;
 }
 
 .input-control textarea {
@@ -366,8 +365,9 @@ article h1 {
 }
 
 .input-control textarea:hover,
-.input-control input:hover {
-  border: 1px solid #60c095;
+.input-control input:hover ,
+.desktopformname input:hover {
+  border: 2px solid #60c095;
 }
 
 .input-control input:focus {
@@ -423,12 +423,23 @@ article h1 {
   margin-top: 30px;
 }
 
+.socials{
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  gap: 20px; 
+}
+
 @media screen and (max-width: 2000px) {
   #first {
     background-image: url("./Images/desktopviewbg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+
+  .mobilename{
+    display: none;
   }
 
   .emailaddress {
@@ -451,6 +462,45 @@ article h1 {
 
   #contact .social {
     display: none;
+  }
+
+  .frameleft , .frameright{
+    display: none;
+  }
+
+  .input-control input ,
+  .input-control textarea{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 15px;
+    padding: 5px;
+    height: 70px;
+    width: 684px;
+  }
+
+  .input-control textarea{
+    height: 114px;
+  }
+
+  .desktopformname{
+    display: flex;
+    flex-direction: row;
+    width: 684px;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+
+  .desktopname input{
+    width: 330px !important;
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 15px;
+    padding: 5px;
+    outline: none;
+    height: 70px;
   }
 }
 
@@ -593,5 +643,30 @@ article h1 {
     width: 327px;
     margin-top: 15px;
     border-radius: 5px;
+  }
+
+  .socials{
+    display: none;
+  }
+
+  .frameleft , .frameright{
+    display: block;
+  }
+  
+  .mobilename{
+    display: block;
+  }
+
+  .desktopname{
+    display: none;
+  }
+
+  .input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+    width: 327px;
   }
 }
