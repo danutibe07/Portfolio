@@ -355,7 +355,7 @@ article h1 {
 }
 
 .input-control textarea:hover,
-.input-control input:hover ,
+.input-control input:hover,
 .desktopformname input:hover {
   border: 2px solid #60c095;
 }
@@ -413,11 +413,11 @@ article h1 {
   margin-top: 30px;
 }
 
-.socials{
+.socials {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   justify-content: center;
-  gap: 20px; 
+  gap: 20px;
 }
 
 @media screen and (max-width: 2000px) {
@@ -428,7 +428,7 @@ article h1 {
     background-position: center;
   }
 
-  .mobilename{
+  .mobilename {
     display: none;
   }
 
@@ -454,12 +454,13 @@ article h1 {
     display: none;
   }
 
-  .frameleft , .frameright{
+  .frameleft,
+  .frameright {
     display: none;
   }
 
-  .input-control input ,
-  .input-control textarea{
+  .input-control input,
+  .input-control textarea {
     border: 2px solid #f0f0f0;
     border-radius: 4px;
     display: block;
@@ -469,11 +470,12 @@ article h1 {
     width: 684px;
   }
 
-  .input-control textarea{
+  .input-control textarea {
     height: 114px !important;
+    outline: none;
   }
 
-  .desktopformname{
+  .desktopformname {
     display: flex;
     flex-direction: row;
     width: 684px;
@@ -482,7 +484,7 @@ article h1 {
     margin-bottom: 15px;
   }
 
-  .desktopname input{
+  .desktopname input {
     width: 330px !important;
     border: 2px solid #f0f0f0;
     border-radius: 4px;
@@ -491,10 +493,6 @@ article h1 {
     padding: 5px;
     outline: none;
     height: 70px;
-  }
-
-  textarea{
-    outline: none;
   }
 }
 
@@ -547,7 +545,7 @@ article h1 {
   }
 
   #form {
-    width: 80%;
+    width: 100%;
   }
 
   .about-content {
@@ -629,10 +627,6 @@ article h1 {
     display: flex;
   }
 
-  #form{
-    width: 100%;
-  }
-
   .emailaddress {
     display: grid;
     color: #e5e5e5;
@@ -643,23 +637,24 @@ article h1 {
     border-radius: 5px;
   }
 
-  .socials{
+  .socials {
     display: none;
   }
 
-  .frameleft , .frameright{
-    display: block;
-  }
-  
-  .mobilename{
+  .frameleft,
+  .frameright {
     display: block;
   }
 
-  .desktopname{
+  .mobilename {
+    display: block;
+  }
+
+  .desktopname {
     display: none;
   }
 
-  .input-control input ,
+  .input-control input,
   .input-control textarea {
     border: 2px solid #f0f0f0;
     border-radius: 4px;
