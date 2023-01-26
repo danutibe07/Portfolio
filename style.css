@@ -245,21 +245,21 @@ article h1 {
   position: relative;
 }
 
-.frameleft {
+.frameleft img {
   position: absolute;
   width: 100px;
   height: 150px;
   left: 0;
-  top: 420px;
+  top: 280px;
   overflow: hidden;
   display: inline-block;
   overflow-x: hidden;
 }
 
-.frameright {
+.frameright img {
   position: absolute;
-  width: 130px;
-  height: 100px;
+  width: 200px;
+  height: 150px;
   right: -25px;
   top: -40px;
   overflow: hidden;
@@ -439,7 +439,7 @@ article h1 {
   justify-content: space-evenly;
 }
 
-@media screen and (max-width: 3000px) {
+@media screen and (min-width: 1200px) {
   #first {
     background-image: url("./Images/desktopviewbg.svg");
     background-repeat: no-repeat;
@@ -561,14 +561,14 @@ article h1 {
   }
 }
 
-@media screen and (max-width: 995px) {
+@media screen and (max-width: 1199px) {
   .boxes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
   #first {
-    background-image: url("./Images/mobile-bg.svg");
+    background-image: url("./Images/desktopviewbg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -607,12 +607,38 @@ article h1 {
 
   .contactframe1,
   .contactframe2,
-  .contactframe3 {
+  .contactframe3,
+  .frameleft,
+  .frameright,
+  .socials {
     display: none;
+  }
+
+  .frameleftdesk {
+    position: absolute;
+    left: 0;
+    top: 160px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
+  .framerightdesk {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
   }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 770px) {
   #works {
     margin-top: 0;
   }
