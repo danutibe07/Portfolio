@@ -97,6 +97,7 @@ a {
   justify-content: center;
   text-align: center;
   gap: 12px;
+  align-items: center;
 }
 
 #first p {
@@ -282,9 +283,15 @@ article h1 {
   align-self: center;
 }
 
-#about h2,
 #works h3 {
   font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 30px;
   font-weight: 700;
   line-height: 52px;
   text-align: center;
@@ -297,36 +304,34 @@ article h1 {
 }
 
 .about-box {
+  height: 360px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-self: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 10px;
-  max-width: 360px;
+  padding: 20px;
   background: #ebf0ee;
 }
 
 .about-list {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin: 27px;
   gap: 5px;
   text-align: center;
   justify-content: center;
-  align-self: center;
-  flex-wrap: wrap;
 }
 
 .about-list-item {
   background-color: #fff;
   color: #36b37f;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 10px;
   letter-spacing: 0.05em;
-  padding: 12px;
+  padding: 10px;
   border-radius: 8px;
 }
 
@@ -352,8 +357,7 @@ article h1 {
 }
 
 .input-control textarea:hover,
-.input-control input:hover,
-.desktopformname input:hover {
+.input-control input:hover {
   border: 2px solid #60c095;
 }
 
@@ -419,6 +423,20 @@ article h1 {
   margin-top: 300px;
   margin-bottom: 50px;
   padding-top: 20px;
+  align-items: center;
+}
+
+.boxe {
+  height: 380px;
+  background-color: #d0d9d4;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 0 auto;
+  min-width: 350px;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 @media screen and (max-width: 3000px) {
@@ -427,10 +445,6 @@ article h1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
-
-  .mobilename {
-    display: none;
   }
 
   .emailaddress {
@@ -577,14 +591,6 @@ article h1 {
     width: 100%;
   }
 
-  .desktopformname {
-    display: none;
-  }
-
-  .mobilename {
-    display: block;
-  }
-
   #contact {
     display: flex;
     flex-direction: column;
@@ -596,6 +602,7 @@ article h1 {
 
   .socials {
     margin-bottom: 30px;
+    text-align: center;
   }
 
   .contactframe1,
@@ -739,14 +746,6 @@ article h1 {
   .frameleft,
   .frameright {
     display: block;
-  }
-
-  .mobilename {
-    display: block;
-  }
-
-  .desktopname {
-    display: none;
   }
 
   .input-control input,
