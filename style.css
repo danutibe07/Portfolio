@@ -6,8 +6,6 @@
   padding: 0;
 }
 
-/* outline: 1px solid red; */
-
 body {
   margin: 0;
   padding: 0;
@@ -99,6 +97,7 @@ a {
   justify-content: center;
   text-align: center;
   gap: 12px;
+  align-items: center;
 }
 
 #first p {
@@ -135,7 +134,6 @@ article h1 {
   display: none;
 }
 
-/* section : works */
 #works {
   padding: 50px;
   margin-top: 200px;
@@ -247,21 +245,21 @@ article h1 {
   position: relative;
 }
 
-.frameleft {
+.frameleft img {
   position: absolute;
   width: 100px;
   height: 150px;
   left: 0;
-  top: 420px;
+  top: 280px;
   overflow: hidden;
   display: inline-block;
   overflow-x: hidden;
 }
 
-.frameright {
+.frameright img {
   position: absolute;
-  width: 130px;
-  height: 100px;
+  width: 200px;
+  height: 150px;
   right: -25px;
   top: -40px;
   overflow: hidden;
@@ -285,9 +283,15 @@ article h1 {
   align-self: center;
 }
 
-#about h2,
 #works h3 {
   font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 30px;
   font-weight: 700;
   line-height: 52px;
   text-align: center;
@@ -300,36 +304,34 @@ article h1 {
 }
 
 .about-box {
+  height: 360px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-self: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 10px;
-  max-width: 360px;
+  padding: 20px;
   background: #ebf0ee;
 }
 
 .about-list {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin: 27px;
   gap: 5px;
   text-align: center;
   justify-content: center;
-  align-self: center;
-  flex-wrap: wrap;
 }
 
 .about-list-item {
   background-color: #fff;
   color: #36b37f;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 10px;
   letter-spacing: 0.05em;
-  padding: 12px;
+  padding: 10px;
   border-radius: 8px;
 }
 
@@ -355,8 +357,7 @@ article h1 {
 }
 
 .input-control textarea:hover,
-.input-control input:hover,
-.desktopformname input:hover {
+.input-control input:hover {
   border: 2px solid #60c095;
 }
 
@@ -418,18 +419,32 @@ article h1 {
   flex-direction: row;
   justify-content: center;
   gap: 20px;
+  border-top: 2px solid #172b4d;
+  margin-top: 300px;
+  margin-bottom: 50px;
+  padding-top: 20px;
+  align-items: center;
 }
 
-@media screen and (max-width: 2000px) {
+.boxe {
+  height: 380px;
+  background-color: #d0d9d4;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 0 auto;
+  min-width: 350px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: 1200px) {
   #first {
     background-image: url("./Images/desktopviewbg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
-
-  .mobilename {
-    display: none;
   }
 
   .emailaddress {
@@ -470,6 +485,56 @@ article h1 {
     width: 684px;
   }
 
+  .frameleftdesk,
+  .framerightdesk {
+    display: flex;
+  }
+
+  .frameleftdesk {
+    position: absolute;
+    left: 0;
+    top: 160px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
+  .framerightdesk {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
+  .contactframe1 {
+    position: absolute;
+    left: 0;
+    bottom: -270px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
+  .contactframe2 {
+    position: absolute;
+    bottom: -270px;
+    left: 500px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
+  .contactframe3 {
+    position: absolute;
+    right: 0;
+    bottom: -270px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
   .input-control textarea {
     height: 114px !important;
     outline: none;
@@ -496,21 +561,84 @@ article h1 {
   }
 }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 1199px) {
   .boxes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
   #first {
-    background-image: url("./Images/mobile-bg.svg");
+    background-image: url("./Images/desktopviewbg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
+
+  #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .input-control input,
+  .input-control textarea {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 15px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+  }
+
+  #contact {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+
+  .socials {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .contactframe1,
+  .contactframe2,
+  .contactframe3,
+  .frameleft,
+  .frameright,
+  .socials {
+    display: none;
+  }
+
+  .frameleftdesk {
+    position: absolute;
+    left: 0;
+    top: 160px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
+  .framerightdesk {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 770px) {
   #works {
     margin-top: 0;
   }
@@ -646,14 +774,6 @@ article h1 {
     display: block;
   }
 
-  .mobilename {
-    display: block;
-  }
-
-  .desktopname {
-    display: none;
-  }
-
   .input-control input,
   .input-control textarea {
     border: 2px solid #f0f0f0;
@@ -662,6 +782,13 @@ article h1 {
     font-size: 15px;
     outline: none;
     padding: 10px;
-    width: 327px;
+  }
+
+  .frameleftdesk,
+  .framerightdesk,
+  .contactframe1,
+  .contactframe2,
+  .contactframe3 {
+    display: none;
   }
 }
