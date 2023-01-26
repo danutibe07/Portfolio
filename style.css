@@ -6,8 +6,6 @@
   padding: 0;
 }
 
-/* outline: 1px solid red; */
-
 body {
   margin: 0;
   padding: 0;
@@ -135,7 +133,6 @@ article h1 {
   display: none;
 }
 
-/* section : works */
 #works {
   padding: 50px;
   margin-top: 200px;
@@ -418,9 +415,13 @@ article h1 {
   flex-direction: row;
   justify-content: center;
   gap: 20px;
+  border-top: 2px solid #172b4d;
+  margin-top: 300px;
+  margin-bottom: 50px;
+  padding-top: 20px;
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 3000px) {
   #first {
     background-image: url("./Images/desktopviewbg.svg");
     background-repeat: no-repeat;
@@ -470,6 +471,56 @@ article h1 {
     width: 684px;
   }
 
+  .frameleftdesk,
+  .framerightdesk {
+    display: flex;
+  }
+
+  .frameleftdesk {
+    position: absolute;
+    left: 0;
+    top: 160px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
+  .framerightdesk {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
+  .contactframe1 {
+    position: absolute;
+    left: 0;
+    bottom: -270px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
+  .contactframe2 {
+    position: absolute;
+    bottom: -270px;
+    left: 500px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
+  .contactframe3 {
+    position: absolute;
+    right: 0;
+    bottom: -270px;
+    overflow: hidden;
+    display: inline-block;
+    overflow-x: hidden;
+  }
+
   .input-control textarea {
     height: 114px !important;
     outline: none;
@@ -496,7 +547,7 @@ article h1 {
   }
 }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 995px) {
   .boxes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -507,6 +558,50 @@ article h1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+
+  #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .input-control input,
+  .input-control textarea {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 15px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .desktopformname {
+    display: none;
+  }
+
+  .mobilename {
+    display: block;
+  }
+
+  #contact {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+
+  .socials {
+    margin-bottom: 30px;
+  }
+
+  .contactframe1,
+  .contactframe2,
+  .contactframe3 {
+    display: none;
   }
 }
 
@@ -662,6 +757,13 @@ article h1 {
     font-size: 15px;
     outline: none;
     padding: 10px;
-    width: 327px;
+  }
+
+  .frameleftdesk,
+  .framerightdesk,
+  .contactframe1,
+  .contactframe2,
+  .contactframe3 {
+    display: none;
   }
 }
