@@ -352,22 +352,12 @@ article h1 {
   display: block;
   font-size: 15px;
   padding: 10px;
-  width: 327px;
-}
-
-.input-control textarea {
-  border: 2px solid #f0f0f0;
-  border-radius: 4px;
-  outline: none;
-  font-size: 15px;
-  padding: 10px;
-  width: 327px;
-  height: 114px;
 }
 
 .input-control textarea:hover,
-.input-control input:hover {
-  border: 1px solid #60c095;
+.input-control input:hover,
+.desktopformname input:hover {
+  border: 2px solid #60c095;
 }
 
 .input-control input:focus {
@@ -410,16 +400,24 @@ article h1 {
 }
 
 .contact-h2 {
-  font-size: 45px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 52px;
   text-align: center;
   height: 363px;
-  width: 327px;
+  width: 450px;
+  padding: 50px;
 }
 
 #contact .social {
   margin-top: 30px;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
 }
 
 @media screen and (max-width: 2000px) {
@@ -430,6 +428,14 @@ article h1 {
     background-position: center;
   }
 
+  .mobilename {
+    display: none;
+  }
+
+  .emailaddress {
+    display: none;
+  }
+
   .about-content {
     display: grid;
     justify-items: center;
@@ -437,12 +443,56 @@ article h1 {
 
   #contact {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 100px;
   }
 
   #contact .social {
     display: none;
+  }
+
+  .frameleft,
+  .frameright {
+    display: none;
+  }
+
+  .input-control input,
+  .input-control textarea {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 15px;
+    padding: 5px;
+    height: 70px;
+    width: 684px;
+  }
+
+  .input-control textarea {
+    height: 114px !important;
+    outline: none;
+  }
+
+  .desktopformname {
+    display: flex;
+    flex-direction: row;
+    width: 684px;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+
+  .desktopname input {
+    width: 330px !important;
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 15px;
+    padding: 5px;
+    outline: none;
+    height: 70px;
   }
 }
 
@@ -495,7 +545,7 @@ article h1 {
   }
 
   #form {
-    width: 80%;
+    width: 100%;
   }
 
   .about-content {
@@ -574,6 +624,44 @@ article h1 {
   }
 
   #contact .social {
+    display: flex;
+  }
+
+  .emailaddress {
+    display: grid;
+    color: #e5e5e5;
+    background-color: #36b37e;
+    padding: 15px;
+    width: 327px;
+    margin-top: 15px;
+    border-radius: 5px;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .frameleft,
+  .frameright {
     display: block;
+  }
+
+  .mobilename {
+    display: block;
+  }
+
+  .desktopname {
+    display: none;
+  }
+
+  .input-control input,
+  .input-control textarea {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 15px;
+    outline: none;
+    padding: 10px;
+    width: 327px;
   }
 }
