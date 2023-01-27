@@ -230,6 +230,19 @@ article h1 {
   align-self: center;
 }
 
+.box-button,
+.emailaddress {
+  transition: all 2s ease;
+}
+
+.box-button:hover,
+.emailaddress:hover {
+  background-color: #d0d9d4;
+  color: #36b37f;
+  box-shadow: 1px 2px #d0d9d4;
+  border: 2px solid #36b37e;
+}
+
 .box-button:active {
   background-color: #008552;
 }
