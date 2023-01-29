@@ -230,9 +230,17 @@ article h1 {
   align-self: center;
 }
 
-.box-button:hover {
-  background-color: #36b37f;
+.box-button,
+.emailaddress {
+  transition: all 2s ease;
+}
+
+.box-button:hover,
+.emailaddress:hover {
+  background-color: #d0d9d4;
+  color: #36b37f;
   box-shadow: 1px 2px #d0d9d4;
+  border: 2px solid #36b37e;
 }
 
 .box-button:active {
@@ -707,6 +715,7 @@ article h1 {
 
   .handburger {
     display: block;
+    transition: all 0.5s linear;
   }
 
   .handburger.active .bar:nth-child(2) {
@@ -719,6 +728,11 @@ article h1 {
 
   .handburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .handburger:hover {
+    cursor: pointer;
+    transform: rotate(90deg);
   }
 
   .nav-menu {
@@ -760,6 +774,7 @@ article h1 {
     color: #e5e5e5;
     background-color: #36b37e;
     padding: 15px;
+    align-self: center;
     width: 327px;
     margin-top: 15px;
     border-radius: 5px;
