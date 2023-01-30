@@ -674,7 +674,9 @@ article h1 {
   }
 
   #form {
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .about-content {
@@ -761,8 +763,9 @@ article h1 {
     color: #e5e5e5;
     background-color: #36b37e;
     padding: 15px;
-    width: 327px;
+    width: 300px;
     margin-top: 15px;
+    margin-left: 15% !important;
     border-radius: 5px;
   }
 
