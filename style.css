@@ -242,6 +242,7 @@ article h1 {
 #about {
   display: flex;
   flex-direction: column;
+  z-index: -1;
   position: relative;
 }
 
@@ -737,7 +738,7 @@ article h1 {
   .nav-menu.active {
     left: 0;
     background-color: #fff;
-    height: 720px;
+    height: 820px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
