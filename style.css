@@ -250,6 +250,7 @@ article h1 {
 #about {
   display: flex;
   flex-direction: column;
+  z-index: -1;
   position: relative;
 }
 
@@ -681,7 +682,9 @@ article h1 {
   }
 
   #form {
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .about-content {
@@ -751,7 +754,7 @@ article h1 {
   .nav-menu.active {
     left: 0;
     background-color: #fff;
-    height: 720px;
+    height: 820px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -774,9 +777,10 @@ article h1 {
     color: #e5e5e5;
     background-color: #36b37e;
     padding: 15px;
+    width: 300px;
     align-self: center;
-    width: 327px;
     margin-top: 15px;
+    margin-left: 15% !important;
     border-radius: 5px;
   }
 
