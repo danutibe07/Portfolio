@@ -299,11 +299,22 @@ article h1 {
   text-align: center;
 }
 
-#about .about-btn {
+#about .box-button {
   margin: 0;
   margin-bottom: 30px;
   margin-top: 30px;
   background-color: #1a563d;
+  
+}
+
+ .about-btn:hover,
+.about-btn:focus
+{
+  background-color: #fff;
+  color: #1a563d;
+  box-shadow: 1px 2px #d0d9d4;
+  border: 2px solid #1a563d;
+  cursor: pointer;
 }
 
 .about-box {
