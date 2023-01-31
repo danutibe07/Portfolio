@@ -230,11 +230,6 @@ article h1 {
   align-self: center;
 }
 
-.box-button,
-.emailaddress {
-  transition: all 2s ease;
-}
-
 .box-button:hover,
 .emailaddress:hover,
 .box-button:active {
