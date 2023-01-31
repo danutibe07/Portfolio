@@ -119,7 +119,7 @@ a {
 }
 
 .desc {
-  color: #36b37e;
+  color: #1a563d;
 }
 
 article h1 {
@@ -222,7 +222,7 @@ article h1 {
 
 .box-button {
   color: #fff;
-  background-color: #36b37f;
+  background-color: #1a563d;
   width: 122px;
   height: 48px;
   margin-top: 7px;
@@ -230,21 +230,14 @@ article h1 {
   align-self: center;
 }
 
-.box-button,
-.emailaddress {
-  transition: all 2s ease;
-}
-
 .box-button:hover,
-.emailaddress:hover {
-  background-color: #d0d9d4;
-  color: #36b37f;
+.emailaddress:hover,
+.box-button:focus {
+  background-color: #fff;
+  color: #1a563d;
   box-shadow: 1px 2px #d0d9d4;
-  border: 2px solid #36b37e;
-}
-
-.box-button:active {
-  background-color: #008552;
+  border: 2px solid #1a563d;
+  cursor: pointer;
 }
 
 #about {
@@ -306,10 +299,20 @@ article h1 {
   text-align: center;
 }
 
-#about .about-btn {
+#about .box-button {
   margin: 0;
   margin-bottom: 30px;
   margin-top: 30px;
+  background-color: #1a563d;
+}
+
+#about .box-button:hover,
+#about .box-button:focus {
+  background-color: #fff;
+  color: #1a563d;
+  box-shadow: 1px 2px #d0d9d4;
+  border: 2px solid #1a563d;
+  cursor: pointer;
 }
 
 .about-box {
@@ -335,7 +338,7 @@ article h1 {
 
 .about-list-item {
   background-color: #fff;
-  color: #36b37f;
+  color: #1a563d;
   font-weight: 600;
   font-size: 12px;
   line-height: 10px;
