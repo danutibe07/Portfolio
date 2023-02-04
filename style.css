@@ -39,6 +39,7 @@ header {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
+
 .menu-btn__burger {
   width: 40px;
   height: 6px;
@@ -46,6 +47,7 @@ header {
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
+
 .menu-btn__burger::before,
 .menu-btn__burger::after {
   content: "";
@@ -56,21 +58,26 @@ header {
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
+
 .menu-btn__burger::before {
   transform: translateY(-16px);
 }
+
 .menu-btn__burger::after {
   transform: translateY(16px);
 }
+
 /* ANIMATION */
 .menu-btn.open .menu-btn__burger {
   transform: translateX(-50px);
   background: transparent;
   box-shadow: none;
 }
+
 .menu-btn.open .menu-btn__burger::before {
   transform: rotate(45deg) translate(35px, -35px);
 }
+
 .menu-btn.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
 }
