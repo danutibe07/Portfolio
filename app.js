@@ -29,20 +29,20 @@ navMenu.addEventListener("click", () => {
 });
 
 // localStorage
-let submitBtn = document.getElementById("submit");
-let fullName = document.getElementById("fullname");
-let email = document.getElementById("email");
-let message = document.getElementById("message");
+// let submitBtn = document.getElementById("submit");
+// let fullName = document.getElementById("fullname");
+// let email = document.getElementById("email");
+// let message = document.getElementById("message");
 
-submitBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  fullName = fullName.value;
-  localStorage.setItem("Full Name", fullName);
-  email = email.value;
-  localStorage.setItem("Email", email);
-  message = message.value;
-  localStorage.setItem("message", message);
-//   validateInputs();
-  document.getElementById("form").reset();
-});
+// submitBtn.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   fullName = fullName.value;
+//   localStorage.setItem("Full Name", fullName);
+//   email = email.value;
+//   localStorage.setItem("Email", email);
+//   message = message.value;
+//   localStorage.setItem("message", message);
+// //   validateInputs();
+//   document.getElementById("form").reset();
+// });
 
