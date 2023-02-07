@@ -227,10 +227,7 @@ I would like to thank my coding partners and microverse
 
 <!--MIT-SECTION -->
 
-## 📝 MIT.MD <a name="mit" ></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](./LICENSE)
+## 📝LiCENSE MIT <a name="mit" ></a>
+- [MIT.MD](./LICENSE)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
