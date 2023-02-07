@@ -788,6 +788,11 @@ article h1 {
     padding-left: 30px;
   }
 
+  .nav-item:hover {
+   border-left: 5px solid #172b4d;
+   margin-left: 10px;
+  }
+
   #contact .social {
     display: flex;
   }
