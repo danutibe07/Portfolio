@@ -203,12 +203,13 @@
           </div>
         </li>
       </ul>
-      <script src="app.js"></script>
     </section>
+    li
     <section id="contact">
       <h2 class="contact-h2" tabindex="0">I'm always interested in hearing about new projects, so if you'd like to chat
         please get in touch.</h2>
-      <form id="form" action="https://formspree.io/f/mbjelbzj" method="POST">
+      <!-- <form id="form" action="https://formspree.io/f/mbjelbzj" method="POST"> -->
+        <form action="" id="form">
         <div class="input-control">
           <input id="fullname" name="fullname" type="text" placeholder="Full name" maxlength="30" aria-label="fullname">
           <div class="error"></div>
@@ -222,7 +223,7 @@
             aria-label="message"></textarea>
           <div class="error"></div>
         </div>
-        <button class="box-button" type="submit">Get in touch</button>
+        <button class="box-button" type="submit" id="submit">Get in touch</button>
       </form>
       <ul class="social">
         <li>
@@ -262,6 +263,6 @@
       </li>
     </ul>
   </main>
+  <script src="app.js"></script>
 </body>
-
 </html>

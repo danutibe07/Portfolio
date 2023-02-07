@@ -1,107 +1,48 @@
-const menuBtn = document.querySelector('.menu-btn');
+// Handburger Menu
+const menuBtn = document.querySelector(".menu-btn");
+const navMenu = document.querySelector(".nav-menu");
 let menuOpen = false;
-menuBtn.addEventListener('click', () => {
-  if(!menuOpen) {
-    menuBtn.classList.add('open');
+menuBtn.addEventListener("click", () => {
+  if (!menuOpen) {
+    menuBtn.classList.add("open");
     menuOpen = true;
   } else {
-    menuBtn.classList.remove('open');
+    menuBtn.classList.remove("open");
     menuOpen = false;
   }
 });
 
-const navMenu = document.querySelector(".nav-menu")
-
-menuBtn.addEventListener("click", () =>{
-    menuBtn.classList.toggle("active")
-    navMenu.classList.toggle("active")
-})
-
-navMenu.addEventListener("click", ()=>{
-    navMenu.classList.toggle("active")
-    if(!menuOpen) {
-        menuBtn.classList.add('open');
-        menuOpen = true;
-      } else {
-        menuBtn.classList.remove('open');
-        menuOpen = false;
-      }    
-})
-
-
-const form = document.getElementById('form');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
-
-form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    validateInputs();
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("active");
+  navMenu.classList.toggle("active");
 });
 
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
+navMenu.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  if (!menuOpen) {
+    menuBtn.classList.add("open");
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove("open");
+    menuOpen = false;
+  }
+});
 
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success')
-}
+// localStorage
+let submitBtn = document.getElementById("submit");
+let fullName = document.getElementById("fullname");
+let email = document.getElementById("email");
+let message = document.getElementById("message");
 
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
-};
-
-const isValidEmail = email => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
-
-const validateInputs = () => {
-    const usernameValue = username.value.trim();
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-    const password2Value = password2.value.trim();
-
-    if(usernameValue === '') {
-        setError(username, 'Username is required');
-    } else {
-        setSuccess(username);
-    }
-
-    if(emailValue === '') {
-        setError(email, 'Email is required');
-    } else if (!isValidEmail(emailValue)) {
-        setError(email, 'Provide a valid email address');
-    } else {
-        setSuccess(email);
-    }
-
-    if(passwordValue === '') {
-        setError(password, 'Password is required');
-    } else if (passwordValue.length < 8 ) {
-        setError(password, 'Password must be at least 8 character.')
-    } else {
-        setSuccess(password);
-    }
-
-    if(password2Value === '') {
-        setError(password2, 'Please confirm your password');
-    } else if (password2Value !== passwordValue) {
-        setError(password2, "Passwords doesn't match");
-    } else {
-        setSuccess(password2);
-    }
-
-};
-
-
-
+submitBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  fullName = fullName.value;
+  localStorage.setItem("Full Name", fullName);
+  email = email.value;
+  localStorage.setItem("Email", email);
+  message = message.value;
+  localStorage.setItem("message", message);
+//   validateInputs();
+  document.getElementById("form").reset();
+});
 
