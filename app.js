@@ -101,7 +101,3 @@ const validateInputs = () => {
     }
 
 };
-
-
-
-
