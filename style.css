@@ -490,6 +490,46 @@ article h1 {
   justify-content: space-evenly;
 }
 
+.modal{
+  z-index: 4;
+  background-color: #09c372;
+  height: 1000px;
+  width: 950px;
+  position: fixed;
+  top: 0;
+  left:0;
+  overflow-y: auto;
+}
+
+.hidden-modal {
+  display: none;
+}
+
+.modal-box{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.modal-box div {
+  height: 50px;
+  width: 100%;
+  padding-right: 40px;
+}
+.modal .close{
+  font-size: 50px;
+  width: 50px;
+  color: #172b4d;
+  background-color: #e5e5e5;
+  margin: 10px;
+  float: right;
+}
+
+.modal button{
+  font-size: 20px;
+  color: #e5e5e5;
+}
+
 @media screen and (min-width: 1200px) {
   #first {
     background-image: url("./Images/desktopviewbg.svg");
@@ -788,7 +828,8 @@ article h1 {
     padding-left: 30px;
   }
 
-  .nav-item:hover {
+  .nav-item:hover,
+  .nav-item:focus {
     border-left: 5px solid #172b4d;
     margin-left: 10px;
   }

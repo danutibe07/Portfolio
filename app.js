@@ -1,103 +1,124 @@
-const menuBtn = document.querySelector('.menu-btn');
+// Handburger Menu
+const menuBtn = document.querySelector(".menu-btn");
+const navMenu = document.querySelector(".nav-menu");
 let menuOpen = false;
-menuBtn.addEventListener('click', () => {
-  if(!menuOpen) {
-    menuBtn.classList.add('open');
+menuBtn.addEventListener("click", () => {
+  if (!menuOpen) {
+    menuBtn.classList.add("open");
     menuOpen = true;
   } else {
-    menuBtn.classList.remove('open');
+    menuBtn.classList.remove("open");
     menuOpen = false;
   }
 });
 
-const navMenu = document.querySelector(".nav-menu")
-
-menuBtn.addEventListener("click", () =>{
-    menuBtn.classList.toggle("active")
-    navMenu.classList.toggle("active")
-})
-
-navMenu.addEventListener("click", ()=>{
-    navMenu.classList.toggle("active")
-    if(!menuOpen) {
-        menuBtn.classList.add('open');
-        menuOpen = true;
-      } else {
-        menuBtn.classList.remove('open');
-        menuOpen = false;
-      }    
-})
-
-
-const form = document.getElementById('form');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
-
-form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    validateInputs();
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("active");
+  navMenu.classList.toggle("active");
 });
 
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
+navMenu.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  if (!menuOpen) {
+    menuBtn.classList.add("open");
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove("open");
+    menuOpen = false;
+  }
+});
 
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success')
+// // localStorage
+// let submitBtn = document.getElementById("submit");
+// let fullName = document.getElementById("fullname");
+// let email = document.getElementById("email");
+// let message = document.getElementById("message");
+
+// function validateForm() {
+//   if (fullName.value == "" , email.value == "" , message.value = "") {
+//     alert("Name must be filled out");
+//   }
+//   else {
+//     alert("go through")
+//   }
+// }
+// submitBtn.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   fullName = fullName.value;
+//   localStorage.setItem("Full Name", fullName);
+//   email = email.value;
+//   localStorage.setItem("Email", email);
+//   message = message.value;
+//   localStorage.setItem("message", message);
+//    validateForm();
+//   document.getElementById("form").reset();
+// });
+
+// let modal1 = document.querySelector(".modal1")
+// let modal2 = document.querySelector(".modal2")
+
+// let modalBtn = document.querySelector("#project")
+// let span = document.getElementsByClassName("close")[0];
+
+// modalBtn.addEventListener("click", () => {
+//   modal.style.display = "block" ;
+// });
+
+// span.onclick = function() {
+//   modal.style.display = "none" ;
+// }
+
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none" ;
+//   }
+// }
+
+const worksContainer = document.querySelector('.boxes');
+const works = worksContainer.querySelectorAll('.box');
+const modal = document.querySelector('.modal');
+modal.style.display = 'hidden';
+
+worksContainer.innerHTML = '';
+
+class Work {
+    constructor(id, workImage, title, boxListItems){
+        this.id = id;
+        this.workImage = workImage;
+        this.title = title;
+        this.boxListItems = boxListItems;
+    }
+    showWorkCard () {
+        worksContainer.insertAdjacentHTML('beforeend', `
+            <div class="box" id="${this.id}" tabindex="0">
+                    <div class="work-image" tabindex="0"></div>
+                    <div class="box-menu" tabindex="0">
+                      <h2 class="title" tabindex="0">${this.title}</h2>
+
+                      <ul class="box-list">
+                      ${this.boxListItems}
+                      </ul>
+                      <button class="box-button" id="button-${this.id}">See Project</button>
+                    </div>
+              </div>`);
+    }
 }
 
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
 
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
-};
+const worksArray = [];
+works.forEach(work => {
+    const id = work.id;
+    const workImage = '';
+    const title = work.querySelector('.title').innerHTML;
+    const boxListItems = work.querySelector('.box-list').innerHTML;
+    worksArray.push(new Work(id, workImage, title, boxListItems));
+})
 
-const isValidEmail = email => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
-
-const validateInputs = () => {
-    const usernameValue = username.value.trim();
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-    const password2Value = password2.value.trim();
-
-    if(usernameValue === '') {
-        setError(username, 'Username is required');
-    } else {
-        setSuccess(username);
-    }
-
-    if(emailValue === '') {
-        setError(email, 'Email is required');
-    } else if (!isValidEmail(emailValue)) {
-        setError(email, 'Provide a valid email address');
-    } else {
-        setSuccess(email);
-    }
-
-    if(passwordValue === '') {
-        setError(password, 'Password is required');
-    } else if (passwordValue.length < 8 ) {
-        setError(password, 'Password must be at least 8 character.')
-    } else {
-        setSuccess(password);
-    }
-
-    if(password2Value === '') {
-        setError(password2, 'Please confirm your password');
-    } else if (password2Value !== passwordValue) {
-        setError(password2, "Passwords doesn't match");
-    } else {
-        setSuccess(password2);
-    }
-
-};
+worksArray.forEach(work => work.showWorkCard());
+const boxButtons = document.querySelectorAll('.box-button');
+console.log(boxButtons);
+boxButtons.forEach(button => button.addEventListener('click', ()=> {
+        modal.style.display = 'block';
+        modal.querySelector('.close').addEventListener('click', () => {
+            modal.style.display = 'none'});
+} ))

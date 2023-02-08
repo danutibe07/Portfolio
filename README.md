@@ -100,8 +100,8 @@ This Portfolio is a personal project which could help others understand how to p
 > Add a link to your deployed project.
 
 - [Live Demo Link](https://danutibe07.github.io/Portfolio/)
-<!-- 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -225,4 +225,9 @@ I would like to thank my coding partners and microverse
  GOOGLE CHROME
 ```
 
+<!--MIT-SECTION -->
 
+## 📝LiCENSE MIT <a name="mit" ></a>
+- [MIT.MD](./LICENSE)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
