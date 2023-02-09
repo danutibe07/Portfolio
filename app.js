@@ -121,6 +121,9 @@ const boxButtons = document.querySelectorAll('.box-button');
 console.log(boxButtons);
 boxButtons.forEach(button => button.addEventListener('click', ()=> {
   modalmobile.style.display = 'flex';
+  modal.style.display = 'flex';
   modalmobile.querySelector('.close').addEventListener('click', () => {
     modalmobile.style.display = 'none'});
+    modal.querySelector('.close').addEventListener('click', () => {
+      modal.style.display = 'none'});
 } ))
