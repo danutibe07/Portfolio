@@ -622,10 +622,9 @@ article h1 {
   }
 
   .modal {
-    z-index: 4;
     background-color: #e5e5e5;
     height: 100%;
-    min-width: 100%;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -633,21 +632,22 @@ article h1 {
     overflow: scroll;
   }
 
-  .hidden-modal,
-  .modalmobile {
+  .hidden-modal{
     display: none;
   }
 
   .modal-box {
     margin: 5%;
     width: 70%;
-    height: 150%;
+    height: 120%;
     background-color: #fff;
   }
 
   .modal img {
-    width: 100%;
+    width: 80%;
     height: 500px;
+    margin-left: 10%;
+    z-index: -7;
   }
 
   .modal-box div {
@@ -677,20 +677,24 @@ article h1 {
   .modal-desc {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 50px;
     height: 82px;
     width: 589px;
     padding-top: 20px;
+    margin-left: 10%;
   }
 
   .modal-desc h3 {
     font-size: 25px;
     font-weight: 700;
     line-height: 44px;
+    height: 50px;
     width: 40%;
-    margin-left: 10%;
   }
-
+  .desktop-popup-button{
+width: 50%;
+  }
   .modal-button {
     color: #fff;
     background-color: #1a563d;
@@ -709,16 +713,22 @@ article h1 {
     width: 155px;
   }
 
-  .modal-list {
+  .desktop-modal-list {
     display: flex;
     margin: 27px;
     gap: 5px;
     text-align: center;
-    justify-content: start;
-    margin-left: 16%;
     margin-top: 70px;
   }
 
+  .mobile-modal-list{
+    display: none;
+  }
+
+  .desktop-modal-list{
+    padding-left: 10%;
+  }
+  
   .modal-list-item {
     background-color: #efefef;
     color: #172b4d;
@@ -735,9 +745,12 @@ article h1 {
     font-weight: 500;
     line-height: 30px;
     letter-spacing: 1px;
-    margin-left: 16%;
-    margin-right: 12%;
+    margin-left: 10%;
   }
+
+  .mobile-popup-button{
+    display: none;
+}
 }
 
 @media screen and (max-width: 1199px) {
@@ -886,7 +899,7 @@ article h1 {
     font-weight: 700;
     line-height: 44px;
     padding-left: 7%;
-    width: 50%;
+    width: 100%;
   }
 
   .modal-button {
@@ -907,7 +920,7 @@ article h1 {
     width: 155px;
   }
 
-  .modal-list {
+  .desktop-modal-list {
     display: flex;
     margin: 27px;
     gap: 5px;
@@ -917,6 +930,9 @@ article h1 {
     margin-top: 70px;
   }
 
+  .mobile-modal-list{
+    display: none;
+  }
   .modal-list-item {
     background-color: #efefef;
     color: #172b4d;
@@ -935,6 +951,10 @@ article h1 {
     letter-spacing: 1px;
     margin-left: 12%;
     margin-right: 12%;
+  }
+
+  .mobile-popup-button{
+      display: none;
   }
 }
 
@@ -1047,18 +1067,6 @@ article h1 {
     display: flex;
   }
 
-  .emailaddress {
-    display: grid;
-    color: #e5e5e5;
-    background-color: #36b37e;
-    padding: 15px;
-    width: 300px;
-    align-self: center;
-    margin-top: 15px;
-    margin-left: 15% !important;
-    border-radius: 5px;
-  }
-
   .socials {
     display: none;
   }
@@ -1086,7 +1094,7 @@ article h1 {
     display: none;
   }
 
-  .modalmobile {
+  .modal {
     z-index: 4;
     background-color: #e5e5e5;
     height: 100%;
@@ -1111,10 +1119,11 @@ article h1 {
     margin-left: 14%;
   }
 
-  .modalmobile img {
+  .modal img {
     width: 80%;
     height: 250px;
     margin-left: 15%;
+    overflow: none;
   }
 
   .modal-box div {
@@ -1176,13 +1185,17 @@ article h1 {
     width: 155px;
   }
 
-  .modal-list {
+  .mobile-modal-list {
     display: flex;
     gap: 5px;
     text-align: center;
     justify-content: start;
     margin-left: 20%;
     margin-top: 20px;
+  }
+
+  .desktop-modal-list{
+    display: none;
   }
 
   .modal-list-item {
@@ -1201,4 +1214,12 @@ article h1 {
     margin-top: 20px;
     justify-content: space-evenly;
   }
+
+  .desktop-popup-button{
+    display: none;
+}
+
+.mobile-popup-button{
+  display: block;
+}
 }
