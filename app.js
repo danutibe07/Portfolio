@@ -78,6 +78,8 @@ const worksContainer = document.querySelector('.boxes');
 const works = worksContainer.querySelectorAll('.box');
 const modal = document.querySelector('.modal');
 modal.style.display = 'hidden';
+const modalmobile = document.querySelector('.modalmobile');
+modalmobile.style.display = 'hidden';
 
 worksContainer.innerHTML = '';
 
@@ -118,7 +120,7 @@ worksArray.forEach(work => work.showWorkCard());
 const boxButtons = document.querySelectorAll('.box-button');
 console.log(boxButtons);
 boxButtons.forEach(button => button.addEventListener('click', ()=> {
-        modal.style.display = 'block';
-        modal.querySelector('.close').addEventListener('click', () => {
-            modal.style.display = 'none'});
+  modalmobile.style.display = 'flex';
+  modalmobile.querySelector('.close').addEventListener('click', () => {
+    modalmobile.style.display = 'none'});
 } ))
