@@ -5,26 +5,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
   <title>Daniel Portfolio</title>
+  <link rel="stylesheet" href="./modal.html">
 </head>
 
-<body>
+<body> 
   <header>
     <nav class="navbar">
-           <a href="#"><h1 class="nav-title">Welcome</h1></a>
-        <ul class="nav-menu">
-            <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="handburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+      <a href="#">
+        <h1 class="nav-title">Welcome</h1>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#first" class="nav-link">Portfolio</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+      </div>
     </nav>
-</header>
+  </header>
   <main>
     <section id="first">
       <ul class="menu">
@@ -59,99 +62,97 @@
     </section>
     <section id="works">
       <div class="container">
-        <h2 class="recent-header" tabindex="0">My Recent Works</h3>
-        <hr />
-        <div class="boxes">
-          <div class="box" tabindex="0">
-            <div tabindex="0"></div>
-            <div class="box-menu">
-              <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
-              <ul class="box-list">
-                <li tabindex="0" class="box-list-item">Ruby on rails</li>
-                <li tabindex="0" class="box-list-item">css</li>
-                <li tabindex="0" class="box-list-item">Javascript</li>
-                <li tabindex="0" class="box-list-item">html</li>
-              </ul>
-              <div><button class="box-button">See Project</button></div>
-            </div>
-          </div>
-          <div class="box" tabindex="0">
-            <div tabindex="0"></div>
-            <div class="box-menu" tabindex="0">
-              <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
+          <h2 class="recent-header" tabindex="0">My Recent Works</h2>
+          <hr />
+          <div class="boxes">
+            <div class="box" id="box-1" tabindex="0">
+              <div tabindex="0" class="work-image"></div>
+              <div class="box-menu">
+                <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
+                <ul class="box-list">
+                  <li tabindex="0" class="box-list-item">Ruby on rails</li>
+                  <li tabindex="0" class="box-list-item">css</li>
+                  <li tabindex="0" class="box-list-item">Javascript</li>
+                  <li tabindex="0" class="box-list-item">html</li>
+                </ul>
+                <button class="box-button" id="project">See Project</button>
+                </div>
+              </div>
+            <div class="box" id="box-2" tabindex="0">
+                    <div class="work-image" tabindex="0"></div>
+                    <div class="box-menu" tabindex="0">
+                      <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
+                      <ul class="box-list">
+                        <li tabindex="0" class="box-list-item">Ruby on rails</li>
+                        <li tabindex="0" class="box-list-item">css</li>
+                        <li tabindex="0" class="box-list-item">Javascript</li>
+                        <li tabindex="0" class="box-list-item">html</li>
+                      </ul>
+                      <button class="box-button">See Project</button>
+                    </div>
+              </div>
+            <div class="box" id="box-3" tabindex="0">
+                    <div class="work-image" tabindex="0"></div>
+                    <div class="box-menu" tabindex="0">
+                      <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
 
-              <ul class="box-list">
-                <li tabindex="0" class="box-list-item">Ruby on rails</li>
-                <li tabindex="0" class="box-list-item">css</li>
-                <li tabindex="0" class="box-list-item">Javascript</li>
-                <li tabindex="0" class="box-list-item">html</li>
-              </ul>
-              <button class="box-button">See Project</button>
-            </div>
-          </div>
-          <div class="box" tabindex="0">
-            <div tabindex="0"></div>
-            <div class="box-menu" tabindex="0">
-              <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
+                      <ul class="box-list">
+                        <li tabindex="0" class="box-list-item">Ruby on rails</li>
+                        <li tabindex="0" class="box-list-item">css</li>
+                        <li tabindex="0" class="box-list-item">Javascript</li>
+                        <li tabindex="0" class="box-list-item">html</li>
+                      </ul>
+                      <button class="box-button">See Project</button>
+                    </div>
+              </div>
+            <div class="box" id="box-4" tabindex="0">
+                    <div class="work-image" tabindex="0"></div>
+                    <div tabindex="0" class="box-menu">
+                      <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
 
-              <ul class="box-list">
-                <li tabindex="0" class="box-list-item">Ruby on rails</li>
-                <li tabindex="0" class="box-list-item">css</li>
-                <li tabindex="0" class="box-list-item">Javascript</li>
-                <li tabindex="0" class="box-list-item">html</li>
-              </ul>
-              <button class="box-button">See Project</button>
-            </div>
-          </div>
-          <div class="box" tabindex="0">
-            <div tabindex="0"></div>
-            <div tabindex="0" class="box-menu">
-              <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
+                      <ul class="box-list">
+                        <li tabindex="0" class="box-list-item">Ruby on rails</li>
+                        <li tabindex="0" class="box-list-item">css</li>
+                        <li tabindex="0" class="box-list-item">Javascript</li>
+                        <li tabindex="0" class="box-list-item">html</li>
+                      </ul>
+                      <button class="box-button">See Project</button>
+                    </div>
+              </div>
+            <div class="box" id="box-5" tabindex="0">
+                    <div class="work-image" tabindex="0"></div>
+                    <div class="box-menu" tabindex="0">
+                      <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
 
-              <ul class="box-list">
-                <li tabindex="0" class="box-list-item">Ruby on rails</li>
-                <li tabindex="0" class="box-list-item">css</li>
-                <li tabindex="0" class="box-list-item">Javascript</li>
-                <li tabindex="0" class="box-list-item">html</li>
-              </ul>
-              <button class="box-button">See Project</button>
-            </div>
-          </div>
-          <div class="box">
-            <div tabindex="0"></div>
-            <div class="box-menu" tabindex="0">
-              <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
-
-              <ul class="box-list">
-                <li tabindex="0" class="box-list-item">Ruby on rails</li>
-                <li tabindex="0" class="box-list-item">css</li>
-                <li tabindex="0" class="box-list-item">Javascript</li>
-                <li tabindex="0" class="box-list-item">html</li>
-              </ul>
-              <button class="box-button">See Project</button>
-            </div>
-          </div>
-          <div class="box" tabindex="0">
-            <div tabindex="0"></div>
-            <div class="box-menu" tabindex="0">
-              <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
-              <ul class="box-list">
-                <li tabindex="0" class="box-list-item">Ruby on rails</li>
-                <li tabindex="0" class="box-list-item">css</li>
-                <li tabindex="0" class="box-list-item">Javascript</li>
-                <li tabindex="0" class="box-list-item">html</li>
-              </ul>
-              <button class="box-button">See Project</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <div class="frameleft"><img  src="./Images/frameleft.svg" alt="Frame1"></div>
-        <div class="frameright"> <img  src="./Images/frameright.svg" alt="Frame2"></div>
-        <div class="frameleftdesk"><img  src="./Images/frameleftdesktop.svg" alt="Frame3"></div>
-        <div class="framerightdesk"> <img  src="./Images/framerightdesktop.svg" alt="Frame4"></div>
+                      <ul class="box-list">
+                        <li tabindex="0" class="box-list-item">Ruby on rails</li>
+                        <li tabindex="0" class="box-list-item">css</li>
+                        <li tabindex="0" class="box-list-item">Javascript</li>
+                        <li tabindex="0" class="box-list-item">html</li>
+                      </ul>
+                      <button class="box-button">See Project</button>
+                    </div>
+              </div>
+            <div class="box" id="box-6" tabindex="0">
+                    <div class="work-image" tabindex="0"></div>
+                    <div class="box-menu" tabindex="0">
+                      <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
+                      <ul class="box-list">
+                        <li tabindex="0" class="box-list-item">Ruby on rails</li>
+                        <li tabindex="0" class="box-list-item">css</li>
+                        <li tabindex="0" class="box-list-item">Javascript</li>
+                        <li tabindex="0" class="box-list-item">html</li>
+                      </ul>
+                      <button class="box-button">See Project</button>
+                    </div>
+             </div>
+    </div>
+  </section>
+  <section id="about">
+      <div class="frameleft"><img src="./Images/frameleft.svg" alt="Frame1"></div>
+      <div class="frameright"> <img src="./Images/frameright.svg" alt="Frame2"></div>
+      <div class="frameleftdesk"><img src="./Images/frameleftdesktop.svg" alt="Frame3"></div>
+      <div class="framerightdesk"> <img src="./Images/framerightdesktop.svg" alt="Frame4"></div>
       <div class="about-content">
         <h2 tabindex="0">About Me</h2>
         <p tabindex="0" class="about-desc">
@@ -162,7 +163,7 @@
         <button class="box-button">Get My Resume</button>
       </div>
       <ul class="boxes">
-        <li class="boxe"  tabindex="0">
+        <li class="boxe" tabindex="0">
           <div><img tabindex="0" class="about-img" src="./Images/icon1.svg" alt="Languages" /></div>
           <div class="about-menu" tabindex="0">
             <h2 tabindex="0" class="about-title">Languages</h2>
@@ -181,7 +182,7 @@
             <ul class="about-list">
               <li tabindex="0" class="about-list-item">Bootstrap</li>
               <li tabindex="0" class="about-list-item">Ruby on rails</li>
-              <li tabindex="0" class="about-list-item">RSpec</li> 
+              <li tabindex="0" class="about-list-item">RSpec</li>
               <li tabindex="0" class="about-list-item">Capybara</li>
               <li tabindex="0" class="about-list-item">Selenium</li>
             </ul>
@@ -195,51 +196,55 @@
               <li tabindex="0" class="about-list-item">Codekit</li>
               <li tabindex="0" class="about-list-item">Github</li>
               <li tabindex="0" class="about-list-item">Codepen</li>
-              <li tabindex="0" class="about-list-item">Gitlab</li> 
+              <li tabindex="0" class="about-list-item">Gitlab</li>
               <li tabindex="0" class="about-list-item">Terminal</li>
             </ul>
           </div>
         </li>
       </ul>
-        <script src="app.js"></script>
     </section>
+    li
     <section id="contact">
-      <h2 class="contact-h2" tabindex="0">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
-      <form id="form"  action="https://formspree.io/f/mbjelbzj" method="POST">
-        <div class="input-control" >
-            <input  id="fullname" name="fullname" type="text" placeholder="Full name" maxlength="30" aria-label="fullname">
-            <div class="error"></div>
-        </div>
+      <h2 class="contact-h2" tabindex="0">I'm always interested in hearing about new projects, so if you'd like to chat
+        please get in touch.</h2>
+      <!-- <form id="form" action="https://formspree.io/f/mbjelbzj" method="POST"> -->
+      <!-- <form action="" id="form"> -->
+      <form name="myForm" action="/action_page.php" id="form" onsubmit="return validateForm()" method="post">
         <div class="input-control">
-            <input id="email" name="email" type="text" placeholder="Email address" aria-label="emailaddress">
-            <div class="error"></div>
-        </div>
-        <div class="input-control">
-          <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter text here" maxlength="500" aria-label="message"></textarea>
+          <input id="fullname" name="fullname" type="text" placeholder="Full name" maxlength="30" aria-label="fullname">
           <div class="error"></div>
-      </div>
-        <button class= "box-button" type="submit">Get in touch</button>
-    </form>
-    <ul class="social">
-      <li>
-        <a href="#"><img src="./Images//twitter.svg" alt="Twiiter" /></a>
-      </li>
-      <li>
-        <a href="#"> <img src="./Images//linkedin.svg" alt="linkedin" /></a>
-      </li>
-      <li>
-        <a href="#"><img src="./Images/medium.svg" alt="Medium" /></a>
-      <li>
-        <a href="#"><img src="./Images//github.svg" alt="Github" /></a>
-      </li>
-      <li>
-        <a href="#"><img src="./Images//angellist.svg" alt="angellist" /></a>
-      </li>
-    </ul>
-    <div class= "emailaddress">danielutibe07@gmail.com</div>
-    <div class="contactframe1"> <img  src="./Images/contactframe1.svg" alt="Frame5"></div>
-    <div class="contactframe2"><img  src="./Images/contactframe2.svg" alt="Frame6"></div>
-    <div class="contactframe3"> <img src="./Images/contactframe3.svg" alt="Frame7"></div>
+        </div>
+        <div class="input-control">
+          <input id="email" name="email" type="text" placeholder="Email address" aria-label="emailaddress">
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter text here" maxlength="500"
+            aria-label="message"></textarea>
+          <div class="error"></div>
+        </div>
+        <button class="box-button" type="submit" id="submit" value="Submit">Get in touch</button>
+      </form>
+      <ul class="social">
+        <li>
+          <a href="#"><img src="./Images//twitter.svg" alt="Twiiter" /></a>
+        </li>
+        <li>
+          <a href="#"> <img src="./Images//linkedin.svg" alt="linkedin" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./Images/medium.svg" alt="Medium" /></a>
+        <li>
+          <a href="#"><img src="./Images//github.svg" alt="Github" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./Images//angellist.svg" alt="angellist" /></a>
+        </li>
+      </ul>
+      <div class="emailaddress">danielutibe07@gmail.com</div>
+      <div class="contactframe1"> <img src="./Images/contactframe1.svg" alt="Frame5"></div>
+      <div class="contactframe2"><img src="./Images/contactframe2.svg" alt="Frame6"></div>
+      <div class="contactframe3"> <img src="./Images/contactframe3.svg" alt="Frame7"></div>
     </section>
     <ul class="socials">
       <li>
@@ -258,6 +263,29 @@
       </li>
     </ul>
   </main>
+  <div class="modal hidden-modal">
+    <div class="modal-box">
+      <div><span class="close">&times;</span></div>
+      <img src="./Images/ModalPopup.svg" alt="">
+      <div>
+        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, quae?</h1>
+        <ul>
+          <button class="box-button"> See Live <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
+              height="24" viewBox="0 0 24 24">
+              <path
+                d="M 19.980469 2.9902344 A 1.0001 1.0001 0 0 0 19.869141 3 L 15 3 A 1.0001 1.0001 0 1 0 15 5 L 17.585938 5 L 8.2929688 14.292969 A 1.0001 1.0001 0 1 0 9.7070312 15.707031 L 19 6.4140625 L 19 9 A 1.0001 1.0001 0 1 0 21 9 L 21 4.1269531 A 1.0001 1.0001 0 0 0 19.980469 2.9902344 z M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 13 A 1.0001 1.0001 0 1 0 19 13 L 19 19 L 5 19 L 5 5 L 11 5 A 1.0001 1.0001 0 1 0 11 3 L 5 3 z">
+              </path>
+            </svg></button>
+          <button class="box-button"> Source <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
+              height="24" viewBox="0 0 24 24">
+              <path
+                d="M 19.980469 2.9902344 A 1.0001 1.0001 0 0 0 19.869141 3 L 15 3 A 1.0001 1.0001 0 1 0 15 5 L 17.585938 5 L 8.2929688 14.292969 A 1.0001 1.0001 0 1 0 9.7070312 15.707031 L 19 6.4140625 L 19 9 A 1.0001 1.0001 0 1 0 21 9 L 21 4.1269531 A 1.0001 1.0001 0 0 0 19.980469 2.9902344 z M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 13 A 1.0001 1.0001 0 1 0 19 13 L 19 19 L 5 19 L 5 5 L 11 5 A 1.0001 1.0001 0 1 0 11 3 L 5 3 z">
+              </path>
+            </svg></button>
+        </ul>
+      </div>
+    </div>
+  <script src="app.js"></script>
 </body>
-</html>
 
+</html>

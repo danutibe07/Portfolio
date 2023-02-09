@@ -28,6 +28,60 @@ header {
   display: none;
 }
 
+/* Animated Handburger Menu */
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger {
+  width: 40px;
+  height: 6px;
+  background: #172b4d;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background: #172b4d;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
 .navbar {
   min-height: 70px;
   display: flex;
@@ -49,21 +103,6 @@ header {
 
 li {
   list-style: none;
-}
-
-.handburger {
-  display: none;
-  cursor: pointer;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #172b4d;
-  margin: 5px auto;
-  -webkit-transition: all 0.3 ease-in-out;
-  transition: all 0.3 ease-in-out;
 }
 
 ul,
@@ -451,6 +490,46 @@ article h1 {
   justify-content: space-evenly;
 }
 
+.modal{
+  z-index: 4;
+  background-color: #09c372;
+  height: 1000px;
+  width: 950px;
+  position: fixed;
+  top: 0;
+  left:0;
+  overflow-y: auto;
+}
+
+.hidden-modal {
+  display: none;
+}
+
+.modal-box{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.modal-box div {
+  height: 50px;
+  width: 100%;
+  padding-right: 40px;
+}
+.modal .close{
+  font-size: 50px;
+  width: 50px;
+  color: #172b4d;
+  background-color: #e5e5e5;
+  margin: 10px;
+  float: right;
+}
+
+.modal button{
+  font-size: 20px;
+  color: #e5e5e5;
+}
+
 @media screen and (min-width: 1200px) {
   #first {
     background-image: url("./Images/desktopviewbg.svg");
@@ -719,28 +798,6 @@ article h1 {
     width: 350px !important;
   }
 
-  .handburger {
-    display: block;
-    transition: all 0.5s linear;
-  }
-
-  .handburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .handburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .handburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .handburger:hover {
-    cursor: pointer;
-    transform: rotate(90deg);
-  }
-
   .nav-menu {
     position: fixed;
     left: -100%;
@@ -769,6 +826,12 @@ article h1 {
     line-height: 44px;
     padding-top: 20px;
     padding-left: 30px;
+  }
+
+  .nav-item:hover,
+  .nav-item:focus {
+    border-left: 5px solid #172b4d;
+    margin-left: 10px;
   }
 
   #contact .social {
