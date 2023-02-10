@@ -54,15 +54,18 @@ submitBtn.addEventListener("click", function (e) {
   let messageError = document.getElementById("message-error");
   let emailError = document.getElementById("email-error");
   if (fullName?.value?.length < 1) {
-    fullNameError.innerText = "name is required";
+    fullNameError.innerText = "your fullname is required";
   } else {
     fullNameError.innerText = " ";
   }
-
-  if (email?.value?.length < 1) {
+  const emailVal = email?.value;
+  if (emailVal.toLowerCase() !== emailVal) {
+    emailError.innerText = "Email must be in lower case";
+  } else if (email?.value?.length < 1) {
     emailError.innerText = "email is required";
-  } else {
-    emailError.innerText = " ";
+  }
+  else {
+    messageError.innerText = " ";
   }
   if (message?.value?.length < 1) {
     messageError.innerText = "message is required";
@@ -235,3 +238,23 @@ const showCard = function (arr) {
 };
 
 showCard(works);
+
+
+
+//use defer to load after body
+//put ids on the form elements
+// have an err div on the top of the form
+// const form = document.getElementById('form')
+
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+
+//     const emailVal = email.value;
+
+//   if(emailVal.toLowerCase() == emailVal){
+//     form.submit();
+//   }
+//   else{
+//     message.innerHTML = 'Email must be in lower case';
+//   }
+// }) 

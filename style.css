@@ -436,8 +436,10 @@ article h1 {
 
 .input-control .error {
   color: #ff3860;
-  font-size: 9px;
+  font-size: 15px;
   height: 13px;
+  float: left;
+  padding-bottom: 10px;
 }
 
 .framecontact {
@@ -639,7 +641,7 @@ article h1 {
   .modal-box {
     margin: 5%;
     width: 70%;
-    height: 120%;
+    height: 150%;
     background-color: #fff;
   }
 
