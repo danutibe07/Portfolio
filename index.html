@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
   <title>Daniel Portfolio</title>
-  <link rel="stylesheet" href="./modal.html">
 </head>
 
 <body> 
@@ -64,89 +63,7 @@
       <div class="container">
           <h2 class="recent-header" tabindex="0">My Recent Works</h2>
           <hr />
-          <div class="boxes">
-            <div class="box" id="box-1" tabindex="0">
-              <div tabindex="0" class="work-image"></div>
-              <div class="box-menu">
-                <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
-                <ul class="box-list">
-                  <li tabindex="0" class="box-list-item">Ruby on rails</li>
-                  <li tabindex="0" class="box-list-item">css</li>
-                  <li tabindex="0" class="box-list-item">Javascript</li>
-                  <li tabindex="0" class="box-list-item">html</li>
-                </ul>
-                <button class="box-button" id="project">See Project</button>
-                </div>
-              </div>
-            <div class="box" id="box-2" tabindex="0">
-                    <div class="work-image" tabindex="0"></div>
-                    <div class="box-menu" tabindex="0">
-                      <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
-                      <ul class="box-list">
-                        <li tabindex="0" class="box-list-item">Ruby on rails</li>
-                        <li tabindex="0" class="box-list-item">css</li>
-                        <li tabindex="0" class="box-list-item">Javascript</li>
-                        <li tabindex="0" class="box-list-item">html</li>
-                      </ul>
-                      <button class="box-button">See Project</button>
-                    </div>
-              </div>
-            <div class="box" id="box-3" tabindex="0">
-                    <div class="work-image" tabindex="0"></div>
-                    <div class="box-menu" tabindex="0">
-                      <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
-
-                      <ul class="box-list">
-                        <li tabindex="0" class="box-list-item">Ruby on rails</li>
-                        <li tabindex="0" class="box-list-item">css</li>
-                        <li tabindex="0" class="box-list-item">Javascript</li>
-                        <li tabindex="0" class="box-list-item">html</li>
-                      </ul>
-                      <button class="box-button">See Project</button>
-                    </div>
-              </div>
-            <div class="box" id="box-4" tabindex="0">
-                    <div class="work-image" tabindex="0"></div>
-                    <div tabindex="0" class="box-menu">
-                      <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
-
-                      <ul class="box-list">
-                        <li tabindex="0" class="box-list-item">Ruby on rails</li>
-                        <li tabindex="0" class="box-list-item">css</li>
-                        <li tabindex="0" class="box-list-item">Javascript</li>
-                        <li tabindex="0" class="box-list-item">html</li>
-                      </ul>
-                      <button class="box-button">See Project</button>
-                    </div>
-              </div>
-            <div class="box" id="box-5" tabindex="0">
-                    <div class="work-image" tabindex="0"></div>
-                    <div class="box-menu" tabindex="0">
-                      <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
-
-                      <ul class="box-list">
-                        <li tabindex="0" class="box-list-item">Ruby on rails</li>
-                        <li tabindex="0" class="box-list-item">css</li>
-                        <li tabindex="0" class="box-list-item">Javascript</li>
-                        <li tabindex="0" class="box-list-item">html</li>
-                      </ul>
-                      <button class="box-button">See Project</button>
-                    </div>
-              </div>
-            <div class="box" id="box-6" tabindex="0">
-                    <div class="work-image" tabindex="0"></div>
-                    <div class="box-menu" tabindex="0">
-                      <h2 class="title" tabindex="0">Multi-Post Stories <br> Gain+Glory</h2>
-                      <ul class="box-list">
-                        <li tabindex="0" class="box-list-item">Ruby on rails</li>
-                        <li tabindex="0" class="box-list-item">css</li>
-                        <li tabindex="0" class="box-list-item">Javascript</li>
-                        <li tabindex="0" class="box-list-item">html</li>
-                      </ul>
-                      <button class="box-button">See Project</button>
-                    </div>
-             </div>
-    </div>
+          <div class="boxes"></div>
   </section>
   <section id="about">
       <div class="frameleft"><img src="./Images/frameleft.svg" alt="Frame1"></div>
@@ -203,27 +120,26 @@
         </li>
       </ul>
     </section>
-    li
     <section id="contact">
       <h2 class="contact-h2" tabindex="0">I'm always interested in hearing about new projects, so if you'd like to chat
         please get in touch.</h2>
       <!-- <form id="form" action="https://formspree.io/f/mbjelbzj" method="POST"> -->
       <!-- <form action="" id="form"> -->
-      <form name="myForm" action="/action_page.php" id="form" onsubmit="return validateForm()" method="post">
+      <form name="myForm" id="form" onsubmit="(e)=>e.preventDefault()" method="post">
         <div class="input-control">
           <input id="fullname" name="fullname" type="text" placeholder="Full name" maxlength="30" aria-label="fullname">
-          <div class="error"></div>
+          <div id="fullname-error" class="error"></div>
         </div>
         <div class="input-control">
           <input id="email" name="email" type="text" placeholder="Email address" aria-label="emailaddress">
-          <div class="error"></div>
+          <div id="email-error" class="error"></div>
         </div>
         <div class="input-control">
           <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter text here" maxlength="500"
             aria-label="message"></textarea>
-          <div class="error"></div>
+          <div id="message-error" class="error"></div>
         </div>
-        <button class="box-button" type="submit" id="submit" value="Submit">Get in touch</button>
+        <button class="box-button"  id="submit" value="Submit">Get in touch</button>
       </form>
       <ul class="social">
         <li>
@@ -241,7 +157,6 @@
           <a href="#"><img src="./Images//angellist.svg" alt="angellist" /></a>
         </li>
       </ul>
-      <div class="emailaddress">danielutibe07@gmail.com</div>
       <div class="contactframe1"> <img src="./Images/contactframe1.svg" alt="Frame5"></div>
       <div class="contactframe2"><img src="./Images/contactframe2.svg" alt="Frame6"></div>
       <div class="contactframe3"> <img src="./Images/contactframe3.svg" alt="Frame7"></div>
@@ -263,28 +178,7 @@
       </li>
     </ul>
   </main>
-  <div class="modal hidden-modal">
-    <div class="modal-box">
-      <div><span class="close">&times;</span></div>
-      <img src="./Images/ModalPopup.svg" alt="">
-      <div>
-        <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, quae?</h1>
-        <ul>
-          <button class="box-button"> See Live <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
-              height="24" viewBox="0 0 24 24">
-              <path
-                d="M 19.980469 2.9902344 A 1.0001 1.0001 0 0 0 19.869141 3 L 15 3 A 1.0001 1.0001 0 1 0 15 5 L 17.585938 5 L 8.2929688 14.292969 A 1.0001 1.0001 0 1 0 9.7070312 15.707031 L 19 6.4140625 L 19 9 A 1.0001 1.0001 0 1 0 21 9 L 21 4.1269531 A 1.0001 1.0001 0 0 0 19.980469 2.9902344 z M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 13 A 1.0001 1.0001 0 1 0 19 13 L 19 19 L 5 19 L 5 5 L 11 5 A 1.0001 1.0001 0 1 0 11 3 L 5 3 z">
-              </path>
-            </svg></button>
-          <button class="box-button"> Source <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
-              height="24" viewBox="0 0 24 24">
-              <path
-                d="M 19.980469 2.9902344 A 1.0001 1.0001 0 0 0 19.869141 3 L 15 3 A 1.0001 1.0001 0 1 0 15 5 L 17.585938 5 L 8.2929688 14.292969 A 1.0001 1.0001 0 1 0 9.7070312 15.707031 L 19 6.4140625 L 19 9 A 1.0001 1.0001 0 1 0 21 9 L 21 4.1269531 A 1.0001 1.0001 0 0 0 19.980469 2.9902344 z M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 13 A 1.0001 1.0001 0 1 0 19 13 L 19 19 L 5 19 L 5 5 L 11 5 A 1.0001 1.0001 0 1 0 11 3 L 5 3 z">
-              </path>
-            </svg></button>
-        </ul>
-      </div>
-    </div>
+  <div class="modal hidden-modal"></div>
   <script src="app.js"></script>
 </body>
 
