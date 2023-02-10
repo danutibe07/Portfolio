@@ -169,7 +169,8 @@ const works = [
     listItem1: "Ruby on rails",
     listItem2: "Javascript",
     listItem3: "css",
-    img: "./Images/ModalPopup.svg",                                                                                   
+    img: "./Images/ModalPopup.svg",     
+    close: "./Images/Vector.svg",                                                                               
 
   },
 ];
@@ -179,8 +180,8 @@ const showModal = function (works) {
 
   modal.innerHTML = `
   <div class="modal-box">
-  <div><span class="close" id = "close-modal-${works.id}">&times;</span></div>
-  <img src="${works.img}" alt="Twiiter" />
+  <span class="close" id = "close-modal-${works.id}">&times;</span>
+  <img src="${works.img}" alt="Works-img-${works.id}" />
   <div class="modal-desc">
     <h3>Keeping track of hundreds of components</h3>
     <ul class="desktop-popup-button">

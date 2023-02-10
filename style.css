@@ -1116,9 +1116,10 @@ article h1 {
   .modal-box {
     margin: 5%;
     width: 70%;
-    height: 200%;
+    height: 100%;
     background-color: #fff;
     margin-left: 14%;
+    padding-top: 3%;
   }
 
   .modal img {
@@ -1134,21 +1135,25 @@ article h1 {
     padding-right: 40px;
   }
 
-  .modalmobile .close {
-    font-size: 30px;
-    width: 30px;
-    height: 30px;
+  .modal-box span {
+    width: 50px;
+    font-size: 40px;
+    height: 50px;
     color: #172b4d;
-    background-color: #e5e5e5;
+    opacity: 1;
     margin: 10px;
     margin-right: 10px;
     float: right;
+    display: flex !important;
     padding-left: 9px;
     margin-bottom: 10px;
+    margin-right: 10px;
+    top: 0;
+    right: 0;
   }
 
   .modalmobile button {
-    font-size: 20px;
+    font-size: 15px;
     color: #e5e5e5;
   }
 
@@ -1156,44 +1161,64 @@ article h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    height: 82px;
+    height: 150px;
     width: 589px;
     padding-top: 20px;
+    padding-left: 20%;
+    margin-bottom: 5% !important;
   }
 
   .modalmobile h3 {
-    font-size: 25px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 44px;
     padding-left: 20%;
     width: 100%;
+line-height: 42px ;
+
   }
 
   .modal-button {
     color: #fff;
     background-color: #1a563d;
-    width: 150px;
+    width: 130px;
     height: 48px;
     margin-top: 7px;
     border-radius: 5px;
     align-self: center;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
-
+  .mobile-popup-button{
+    gap: 30px;
+    padding-top: 50px;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
   .modalmobilebtn button:hover {
     color: #fff;
     background-color: #36b37e;
-    font-size: 22px;
     height: 50px;
-    width: 155px;
   }
 
   .mobile-modal-list {
     display: flex;
     gap: 5px;
     text-align: center;
-    justify-content: start;
+    justify-content: flex-start;
     margin-left: 20%;
-    margin-top: 20px;
+    margin-top: 10%;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
   }
 
   .desktop-modal-list {
@@ -1223,5 +1248,14 @@ article h1 {
 
   .mobile-popup-button {
     display: block;
+  }
+
+  .modal-box p{
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+
   }
 }
