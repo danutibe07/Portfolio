@@ -641,11 +641,11 @@ article h1 {
   .modal-box {
     margin: 5%;
     background-color: #fff;
-    height: 70%;
+    height: 1100px;
     width: 920px;
     left: 0;
     top: 0;
-    border-radius: 8px;
+    border-radius: 16px;
   }
 
   .modal img {
@@ -859,7 +859,7 @@ article h1 {
 
   .modal-box {
     margin: 5%;
-    height: 80%;
+    height: 850px;
     width: 350px;
     background-color: #fff;
     position: relative;
@@ -888,8 +888,6 @@ article h1 {
   }
 
   .modal-box span {
-    border: 2px solid black;
-    z-index: 40;
     width: 100px;
     font-size: 40px;
     height: 80px;
@@ -958,7 +956,7 @@ article h1 {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 5%;
+    top: 700px;
     left: 5%;
   }
 
@@ -1020,6 +1018,7 @@ article h1 {
     position: absolute;
     top: 370px;
     margin-left: 5%;
+    text-overflow: hidden;
   }
 }
 
@@ -1086,6 +1085,7 @@ article h1 {
     position: absolute;
     top: 370px;
     margin-left: 5%;
+    text-overflow: hidden;
   }
 
   #first p {
@@ -1189,7 +1189,7 @@ article h1 {
 
   .modal-box {
     margin: 5%;
-    height: 70%;
+    height: 850px;
     width: 350px;
     background-color: #fff;
     position: relative;
@@ -1286,7 +1286,7 @@ article h1 {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 5%;
+    top: 700px;
     left: 5%;
   }
 
