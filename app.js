@@ -28,19 +28,6 @@ navMenu.addEventListener("click", () => {
   }
 });
 
-//  localStorage
-// submitBtn.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   fullName = fullName.value;
-//   localStorage.setItem("Full Name", fullName);
-//   email = email.value;
-//   localStorage.setItem("Email", email);
-//   message = message.value;
-//   localStorage.setItem("message", message);
-//    validateForm();
-//   document.getElementById("form").reset();
-// });
-
 // About Section
 const workSection = document.querySelector(".boxes");
 const modal = document.querySelector(".modal");
@@ -113,6 +100,7 @@ const works = [
   },
 ];
 
+//Modal
 const showModal = function (works) {
   console.log(`close-modal-${works.id}`)
   modal.innerHTML = `
@@ -151,6 +139,8 @@ const showModal = function (works) {
     modal.style.display = 'none'
   });
 };
+
+//Show cards in work section
 const showCard = function (arr) {
   arr.forEach((elem) => {
     workSection.insertAdjacentHTML(
@@ -178,19 +168,44 @@ const showCard = function (arr) {
 
 showCard(works);
 
-//form validation
-let email = document.getElementById("email");
+//Storing data in Local Storage
+const formData = [];
+const addFormData = () => {
+  let email = document.getElementById("email");
+let fullName = document.getElementById("fullname");
+let message = document.getElementById("message");
+  const form = {
+    FullName: fullName.value,
+    Email : email.value,
+    Message: message.value,
+  };
+  console.log(message)
+  console.log('here',form)
+  localStorage.setItem('contact-data', JSON.stringify(form))
+  // document.querySelector('form').reset();
+};
+
+//form validation for forms 
 let contactForm = document.querySelector(".contactform")
 let errorMessage = document.getElementById("error-message")
-console.log(contactForm)
 contactForm.addEventListener("submit",  (e) => {
   e.preventDefault() 
-  const emailValue = email.value 
+  let email = document.getElementById("email");
+  let fullName = document.getElementById("fullname");
+let message = document.getElementById("message");
+  const emailValue = email.value; 
+  const fullNameValue = fullName.value;
+  const messageValue = message.value;
   if (emailValue === emailValue.toLowerCase()){
    errorMessage.textContent = "" ;
     contactForm.submit() ;
+    addFormData(fullNameValue , emailValue , messageValue);
+    console.log(form)
   }
   else{
     errorMessage.textContent = "email adress must not contain uppercase letter !!" ;
   }
 })
+
+
+
