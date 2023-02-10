@@ -888,10 +888,11 @@ article h1 {
   }
 
   .modal-box span {
+    z-index: 30;
     width: 100px;
     font-size: 40px;
     height: 80px;
-    color: #fff;
+    color: rgb(153, 211, 232);
     opacity: 1;
     float: right;
     display: flex !important;
@@ -1218,10 +1219,11 @@ article h1 {
   }
 
   .modal-box span {
+    z-index: 30;
     width: 100px;
     font-size: 40px;
     height: 80px;
-    color: #fff;
+    color: rgb(153, 211, 232);
     opacity: 1;
     float: right;
     display: flex !important;
