@@ -179,10 +179,7 @@ const showCard = function (arr) {
 showCard(works);
 
 //form validation
-let submitBtn = document.getElementById("submit");
-let fullName = document.getElementById("fullname");
 let email = document.getElementById("email");
-let message = document.getElementById("message");
 let contactForm = document.querySelector(".contactform")
 let errorMessage = document.getElementById("error-message")
 console.log(contactForm)
