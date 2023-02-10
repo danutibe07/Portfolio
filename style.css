@@ -839,10 +839,6 @@ article h1 {
     flex-direction: column;
   }
 
-  .mobileimg {
-    display: none;
-  }
-
   .modal {
     z-index: 4;
     background-color: #e5e5e5;
@@ -1222,7 +1218,6 @@ article h1 {
   }
 
   .modal-box span {
-    border: 2px solid black;
     width: 100px;
     font-size: 40px;
     height: 80px;
