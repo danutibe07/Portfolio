@@ -123,24 +123,13 @@
     <section id="contact">
       <h2 class="contact-h2" tabindex="0">I'm always interested in hearing about new projects, so if you'd like to chat
         please get in touch.</h2>
-      <!-- <form id="form" action="https://formspree.io/f/mbjelbzj" method="POST"> -->
-      <!-- <form action="" id="form"> -->
-      <form name="myForm" id="form" onsubmit="(e)=>e.preventDefault()" method="post">
-        <div class="input-control">
-          <input id="fullname" name="fullname" type="text" placeholder="Full name" maxlength="30" aria-label="fullname">
-          <div id="fullname-error" class="error"></div>
-        </div>
-        <div class="input-control">
-          <input id="email" name="email" type="text" placeholder="Email address" aria-label="emailaddress">
-          <div id="email-error" class="error"></div>
-        </div>
-        <div class="input-control">
-          <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter text here" maxlength="500"
-            aria-label="message"></textarea>
-          <div id="message-error" class="error"></div>
-        </div>
-        <button class="box-button"  id="submit" value="Submit">Get in touch</button>
-      </form>
+      <form class="contactform" action="https://formspree.io/f/mbjelbzj" method="POST">
+        <input name="Name" id="fullname" type="text" required maxlength="30" class="input-control" placeholder="Write your names here">
+        <input name="Email" id="email" type="email" required class="input-control" placeholder="Write your email address here">
+        <textarea class="input-control" id="message" name="Message" required maxlength="500"
+          placeholder="Write your message here"></textarea>
+        <p id="error-message" class="error"></p> <br>
+        <button class="box-button" type="submit">Get touch</button>
       <ul class="social">
         <li>
           <a href="#"><img src="./Images//twitter.svg" alt="Twiiter" /></a>

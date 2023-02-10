@@ -404,42 +404,39 @@ article h1 {
   justify-items: center;
 }
 
-.input-control {
-  display: flex;
-  flex-direction: column;
+input,
+textarea {
+  outline: none;
+  border: 2px solid #172b4d;
 }
 
-.input-control input {
-  border: 2px solid #f0f0f0;
+textarea {
+  height: 200px !important;
+}
+
+.form {
+  margin-top: 50px !important;
+}
+
+.input-control {
+  border: 2px solid #172b4d;
   border-radius: 4px;
   display: block;
   font-size: 15px;
   padding: 10px;
+  margin-bottom: 25px;
 }
 
-.input-control textarea:hover,
-.input-control input:hover {
-  border: 2px solid #60c095;
-}
-
-.input-control input:focus {
+input:focus {
   outline: 0;
 }
 
-.input-control.success input {
-  border-color: #09c372;
-}
-
-.input-control.error input {
-  border-color: #ff3860;
-}
-
-.input-control .error {
-  color: #ff3860;
+.error {
+  color: #b30b2d;
   font-size: 15px;
   height: 13px;
-  float: left;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 .framecontact {
@@ -537,8 +534,7 @@ article h1 {
     display: none;
   }
 
-  .input-control input,
-  .input-control textarea {
+  .input-control {
     border: 2px solid #f0f0f0;
     border-radius: 4px;
     display: block;
@@ -598,7 +594,7 @@ article h1 {
     overflow-x: hidden;
   }
 
-  .input-control textarea {
+  textarea {
     height: 114px !important;
     outline: none;
   }
@@ -782,8 +778,7 @@ article h1 {
     justify-content: space-around;
   }
 
-  .input-control input,
-  .input-control textarea {
+  .input-control {
     border: 2px solid #f0f0f0;
     border-radius: 4px;
     display: block;
@@ -1152,8 +1147,7 @@ article h1 {
     display: block;
   }
 
-  .input-control input,
-  .input-control textarea {
+  .input-control {
     border: 2px solid #f0f0f0;
     border-radius: 4px;
     display: block;
