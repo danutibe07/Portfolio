@@ -190,7 +190,8 @@ contactForm.addEventListener("submit",  (e) => {
   e.preventDefault() 
   const emailValue = email.value 
   if (emailValue === emailValue.toLowerCase()){
-   
+   errorMessage.textContent = "" ;
+    contactForm.submit() ;
   }
   else{
     errorMessage.textContent = "email adress must not contain uppercase letter !!" ;
