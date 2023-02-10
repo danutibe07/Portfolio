@@ -183,9 +183,9 @@ const showModal = function (works) {
   console.log(`close-modal-${works.id}`)
   modal.innerHTML = `
   <div class="modal-box">
-  <span class="close" id = "close-modal-${works.id}"></span>
+  <span class="close" id = "close-modal-${works.id}">&#10006;</span>
+  <img src="${works.mobileImg}" alt="Mobile-Works-img-${works.id}" class= "mobileimg" />
   <img src="${works.img}" alt="Works-img-${works.id}" class="desktopimg" />
-  <img src="${works.mobileImg}" alt="Mobile-Works-img-${works.id} class="mobileimg" />
   <div class="modal-desc">
     <h3>Keeping track of hundreds of components</h3>
     <ul class="desktop-popup-button">
