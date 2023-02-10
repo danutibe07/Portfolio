@@ -752,6 +752,10 @@ article h1 {
   .mobile-popup-button {
     display: none;
   }
+
+  .mobileimg{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -828,6 +832,9 @@ article h1 {
   .about-content {
     display: flex;
     flex-direction: column;
+  }
+  .mobileimg{
+    display: none;
   }
 }
 
@@ -956,6 +963,10 @@ article h1 {
   }
 
   .mobile-popup-button {
+    display: none;
+  }
+
+  .modal-box:nth-child(2){
     display: none;
   }
 }
@@ -1139,7 +1150,7 @@ article h1 {
     overflow: none;
   }
 
-  .Desktopimg {
+  .desktopimg {
     display: none;
   }
 

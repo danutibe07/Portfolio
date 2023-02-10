@@ -120,6 +120,7 @@ const works = [
     listItem2: "Javascript",
     listItem3: "css",
     img: "./Images/ModalPopup.svg",
+    mobileImg : "./Images/MobileModalPopup.svg",     
   },
 
   {
@@ -130,6 +131,7 @@ const works = [
     listItem2: "Javascript",
     listItem3: "css",
     img: "./Images/ModalPopup.svg",
+    mobileImg : "./Images/MobileModalPopup.svg",     
   },
 
   {
@@ -140,6 +142,7 @@ const works = [
     listItem2: "Javascript",
     listItem3: "css",
     img: "./Images/ModalPopup.svg",
+    mobileImg : "./Images/MobileModalPopup.svg",     
   },
 
   {
@@ -150,6 +153,7 @@ const works = [
     listItem2: "Javascript",
     listItem3: "css",
     img: "./Images/ModalPopup.svg",
+    mobileImg : "./Images/MobileModalPopup.svg",     
   },
 
   {
@@ -160,6 +164,7 @@ const works = [
     listItem2: "Javascript",
     listItem3: "css",
     img: "./Images/ModalPopup.svg",
+    mobileImg : "./Images/MobileModalPopup.svg",     
   },
 
   {
@@ -179,8 +184,8 @@ const showModal = function (works) {
   modal.innerHTML = `
   <div class="modal-box">
   <span class="close" id = "close-modal-${works.id}"></span>
-  <img src="${works.img}" alt="Works-img-${works.id}" class="Desktopimg" />
-  <img src="${works.mobileImg}" alt="Mobile-Works-img-${works.id}" />
+  <img src="${works.img}" alt="Works-img-${works.id}" class="desktopimg" />
+  <img src="${works.mobileImg}" alt="Mobile-Works-img-${works.id} class="mobileimg" />
   <div class="modal-desc">
     <h3>Keeping track of hundreds of components</h3>
     <ul class="desktop-popup-button">
