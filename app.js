@@ -1,29 +1,29 @@
 // Handburger Menu
-const menuBtn = document.querySelector(".menu-btn");
+const menuButton = document.querySelector(".menu-btn");
 const navMenu = document.querySelector(".nav-menu");
 let menuOpen = false;
-menuBtn.addEventListener("click", () => {
+menuButton.addEventListener("click", () => {
   if (!menuOpen) {
-    menuBtn.classList.add("open");
+    menuButton.classList.add("open");
     menuOpen = true;
   } else {
-    menuBtn.classList.remove("open");
+    menuButton.classList.remove("open");
     menuOpen = false;
   }
 });
 
-menuBtn.addEventListener("click", () => {
-  menuBtn.classList.toggle("active");
+menuButton.addEventListener("click", () => {
+  menuButton.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
 
 navMenu.addEventListener("click", () => {
   navMenu.classList.toggle("active");
   if (!menuOpen) {
-    menuBtn.classList.add("open");
+    menuButton.classList.add("open");
     menuOpen = true;
   } else {
-    menuBtn.classList.remove("open");
+    menuButton.classList.remove("open");
     menuOpen = false;
   }
 });
@@ -34,19 +34,19 @@ let fullName = document.getElementById("fullname");
 let email = document.getElementById("email");
 let message = document.getElementById("message");
 
-function validateForm() {
-  if ((fullName.value == "", email.value == "", (message.value = ""))) {
-    alert("Name must be filled out");
-  } else {
-    alert("go through");
-  }
-}
+// function validateForm() {
+//   if ((fullName.value == "", email.value == "", (message.value = ""))) {
+//     alert("Name must be filled out");
+//   } else {
+//     alert("go through");
+//   }
+// }
 
-const isValidEmail = (email) => {
-  const re =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-};
+// const isValidEmail = (email) => {
+//   const re =
+//     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//   return re.test(String(email).toLowerCase());
+// };
 submitBtn.addEventListener("click", function (e) {
   e?.preventDefault();
   console.log(fullName?.value);
@@ -104,268 +104,7 @@ submitBtn.addEventListener("click", function (e) {
 //   }
 // }
 
-// const worksContainer = document.querySelector('.boxes');
-// const works = worksContainer.querySelectorAll('.box');
-// const modal = document.querySelector('.modal');
-// modal.style.display = 'hidden';
-
-// worksContainer.innerHTML = '';
-
-// // class Work {
-// //     constructor(id, workImage, title, boxListItems){
-// //         this.id = id;
-// //         this.workImage = workImage;
-// //         this.title = title;
-// //         this.boxListItems = boxListItems;
-// //     }
-// //     showWorkCard () {
-// //         worksContainer.insertAdjacentHTML('beforeend', `
-// //             <div class="box" id="${this.id}" tabindex="0">
-// //                     <div class="work-image" tabindex="0"></div>
-// //                     <div class="box-menu" tabindex="0">
-// //                       <h2 class="title" tabindex="0">${this.title}</h2>
-
-// //                       <ul class="box-list">
-// //                       ${this.boxListItems}
-// //                       </ul>
-// //                       <button class="box-button" id="button-${this.id}">See Project</button>
-// //                     </div>
-// //               </div>`);
-// //     }
-
-// // }
-
-// // const worksArray = [];
-// // works.forEach(work => {
-// //     const id = work.id;
-// //     const workImage = '';
-// //     const title = work.querySelector('.title').innerHTML;
-// //     const boxListItems = work.querySelector('.box-list').innerHTML;
-// //     worksArray.push(new Work(id, workImage, title, boxListItems));
-// // })
-
-// // worksArray.forEach(work => work.showWorkCard());
-// // const boxButtons = document.querySelectorAll('.box-button');
-// // console.log(boxButtons);
-// // boxButtons.forEach(button => button.addEventListener('click', ()=> {
-// //     modal.style.display = 'flex';
-// //     modal.querySelector('.close').addEventListener('click', () => {
-// //     modal.style.display = 'none'});
-// // } ))
-
-// // Creation of an array of work object instances of the Work class
-
-// const worksmenu = [
-//   new Work(
-//       'work-1',
-//       'images/Snapshoot-Portfolio-1-desktop.png',
-//       "Multi-Post Stories  Gain+Glory"
-//       ['Ruby on rails', 'css', 'JavaScript'],
-//   ),
-//   new Work(
-//       'work-2',
-//       'images/Snapshoot-Portfolio-2-desktop.png',
-//       'Facebook 360',
-//       ['FACEBOOK', 'Full Stack Dev', 'JavaScript'],
-//       `
-//     Experimental content creation feature that allows users to add
-//      to an existing
-//     story over the course of a day without spamming their friends.`,
-//       ['html', 'css', 'Ruby on rails', 'javascript'],
-//   ),
-//   new Work(
-//       'work-3',
-//       'images/Snapshoot-Portfolio-3-desktop.png',
-//       'Tonic',
-//       ['FACEBOOK', 'Full Stack Dev', '2016'],
-//       `
-//       Exploring the future of media in Facebook's first Virtual Reality app;
-//        a place to discover and enjoy 360 photos and videos on Gear VR.`,
-//       ['html', 'css', 'Ruby on rails', 'javascript'],
-//   ),
-//   new Work(
-//       'work-4',
-//       'images/Snapshoot-Portfolio-4-desktop.png',
-//       'Uber Navigation',
-//       ['Uber', 'Lead Developer', '2018'],
-//       `
-//       A smart assistant to make driving more safe, efficient,
-//        and fun by unlocking
-//        your most expensive computer: your car.`,
-//       ['html', 'css', 'Ruby on rails', 'javascript'],
-//   ),
-//   new Work(
-//     'work-5',
-//     'images/Snapshoot-Portfolio-3-desktop.png',
-//     'Tonic',
-//     ['FACEBOOK', 'Full Stack Dev', '2016'],
-//     `
-//     Exploring the future of media in Facebook's first Virtual Reality app;
-//      a place to discover and enjoy 360 photos and videos on Gear VR.`,
-//     ['html', 'css', 'Ruby on rails', 'javascript'],
-// ),
-// new Work(
-//     'work-6',
-//     'images/Snapshoot-Portfolio-4-desktop.png',
-//     'Uber Navigation',
-//     ['Uber', 'Lead Developer', '2018'],
-//     `
-//     A smart assistant to make driving more safe, efficient,
-//      and fun by unlocking
-//      your most expensive computer: your car.`,
-//     ['html', 'css', 'Ruby on rails', 'javascript'],
-// ),
-// ];
-
-// // showing on the page each work card
-// works.forEach((work) => work.showWorkCard());
-
-// /**
-//  * This class can return works objects
-//  */
-// class Work {
-//   /**
-//    * @param {string} id
-//    * @param {string} imgSrc
-//    * @param {string} name
-//    * @param {string} smallDescription
-//    * @param {string} summary
-//    * @param {string} usedTools
-//    *  */
-//   constructor(id, imgSrc, name, smallDescription,
-//       summary, usedTools) {
-//     this.id = id;
-//     this.imgSrc = imgSrc;
-//     this.name = name;
-//     this.smallDescription = smallDescription;
-//     this.summary = summary;
-//     this.usedTools = usedTools;
-//   }
-
-//   /**
-//    * This function shows the popup on the page
-//    * */
-//   #displayPopup() {
-//     popup.innerHTML = `
-//     <div class="popup-container">
-//       <div class="popup-header">
-//         <div class="popup-top">
-//           <h2 class="work-name title">${this.name}</h2>
-//           <button class="close-popup__btn">
-//             <img src="icons/reject-popup.png" alt="exit"
-//             class="close-popup__icon">
-//           </button>
-//         </div>
-//         <h4 class="small-description">
-//           ${this.#CreateSmallDescriptionHTML()}
-//         </h4>
-//       </div>
-//       <div class="popup-image__container">
-//         <img src="${this.imgSrc}" alt="work image" class="popup-image">
-//       </div>
-//       <div class="popup-footer">
-//         <p class="work-descripton-mobile">${this.summary}
-//           releorem Ipsum is simply dummy text of the printing and
-//            typesetting industry. Lorem Ipsum han printer took a galley of
-//           type and scrambled it 1960s with the releawn printer took </p>
-//         <p class="work-description-desktop">${this.summary}
-//          typesetting industry. Lorem Ipsum
-//          has been the industry's
-//           standard dummy text ever
-//           since the 1500s, when an unknown printer took a
-//            galley of type and scrambled it 1960s with the
-//           releorem Ipsum is simply dummy text of the printing and
-//            typesetting industry. Lorem Ipsum han printer took a galley of
-//           type and scrambled it 1960s with the releawn printer took
-//           a galley of type and scrambled it 1960s with the releaLorem
-//           Ipsum is simply dummy text of the printing and typesetting
-//            industry. Lorem Ipsum has been the industry's standard dummy
-//           text ever since the 1500s, when an unknown printer took a galley of
-//            type and scrambled it 1960s with the relea
-//         </p>
-//         <div class="popup-tools-and-btn">
-//           <div class="popup-work__tools">${this.#createUsedToolsHTML()}
-//           </div>
-//           <div class="popup-work_tools popup-work-tools_desktop">
-//             <div class="tool">Github</div>
-//             <div class="tool">Ruby</div>
-//             <div class="tool">Bootstrap</div>
-//           </div>
-//           <div class="popup-btn__container">
-//             <button class="popup-btn portfolio-btn">
-//               See live <img src="icons/popup-see-project.png" alt="icon"
-//                 class="popup-btn__icon"></button>
-//             <button class="popup-btn portfolio-btn">
-//               See Source <img src="icons/popup-github.png" alt="icon"
-//                 class="popup-btn__icon"></button>
-//           </div>
-//         </div>
-//       </div>
-//     </div>`;
-//     popup.classList.remove('popup-hidden');
-//     popup.querySelector('.close-popup__btn').addEventListener('click', ()=> {
-//       popup.classList.add('popup-hidden');
-//     });
-//     popup.addEventListener('click', (e) =>{
-//       if (e.target.classList.contains('popup')) {
-//         popup.classList.add('popup-hidden');
-//       }
-//     });
-//   }
-//   /**
-//  *
-//  * @return {string} toolsHTML
-//  */
-//   #createUsedToolsHTML() {
-//     let toolsHTML = '';
-//     this.usedTools.forEach((tool) => {
-//       toolsHTML += `<li class="tool">${tool}</li>`;
-//     });
-//     return toolsHTML;
-//   }
-
-//   /**
-//    * @return {string}
-//    */
-//   #CreateSmallDescriptionHTML() {
-//     return `
-//       ${this.smallDescription[0]}
-//           <span class="small-description-highlight">
-//             <img src="icons/Counter.png" class="counter"
-//              alt="counter"/> ${this.smallDescription[1]}
-//             <img src="icons/Counter.png" class="counter" alt="counter"/>
-//              ${this.smallDescription[2]}</span>
-//         `;
-//   }
-
-//   /**
-//  * this function shows programaticaly the work cards on the page
-//  */
-//   showWorkCard() {
-//     workSection.insertAdjacentHTML('beforeend', `
-//     <div class="work" id="${this.id}">
-//       <img src="${this.imgSrc}" class="work-image" alt="work image">
-//       <div class="work-description">
-//         <h3 class="work-name title">${this.name}</h3>
-//         <h4 class="small-description">
-//         ${this.#CreateSmallDescriptionHTML()}
-//         </h4>
-//         <p class="work-summary">${this.summary}
-//         </p>
-//         <ul class="work-used-tools">${this.#createUsedToolsHTML()}
-//         </ul>
-//           <button class="portfolio-btn" id="see-project-btn-${this.id}">
-//             See Project</button>
-//       </div>
-//     </div>
-//     `);
-//     workSection.querySelector(`#see-project-btn-${this.id}`)
-//         .addEventListener('click', this.#displayPopup.bind(this));
-//   }
-// }
-
 // About Section
-const worksContainer = document.querySelector(".boxes");
 const workSection = document.querySelector(".boxes");
 const modal = document.querySelector(".modal");
 
