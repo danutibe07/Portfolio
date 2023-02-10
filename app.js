@@ -166,7 +166,7 @@ const works = [
     listItem1: "Ruby on rails",
     listItem2: "Javascript",
     listItem3: "css",
-    img2: "./Images/ModalPopup.svg",                                                                                   
+    img: "./Images/ModalPopup.svg",                                                                                   
 
   },
 ];
