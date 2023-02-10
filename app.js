@@ -178,9 +178,7 @@ let message = document.getElementById("message");
     Email : email.value,
     Message: message.value,
   };
-  localStorage.setItem('contact-data', JSON.stringify(form))
-  console.log(form)
-  // document.querySelector('form').reset();
+
 };
 
 //form validation for forms 
