@@ -169,7 +169,6 @@ const showCard = function (arr) {
 showCard(works);
 
 //Storing data in Local Storage
-const formData = [];
 const addFormData = () => {
   let email = document.getElementById("email");
 let fullName = document.getElementById("fullname");
@@ -179,9 +178,8 @@ let message = document.getElementById("message");
     Email : email.value,
     Message: message.value,
   };
-  console.log(message)
-  console.log('here',form)
   localStorage.setItem('contact-data', JSON.stringify(form))
+  console.log(form)
   // document.querySelector('form').reset();
 };
 
@@ -200,7 +198,6 @@ let message = document.getElementById("message");
    errorMessage.textContent = "" ;
     contactForm.submit() ;
     addFormData(fullNameValue , emailValue , messageValue);
-    console.log(form)
   }
   else{
     errorMessage.textContent = "email adress must not contain uppercase letter !!" ;
