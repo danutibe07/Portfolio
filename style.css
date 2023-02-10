@@ -1113,7 +1113,8 @@ article h1 {
     top: 0;
     left: 0;
     justify-content: center;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   .hidden-modal,
@@ -1122,19 +1123,24 @@ article h1 {
   }
 
   .modal-box {
-    margin: 5%;
-    width: 70%;
-    height: 100%;
+    margin: 0 5%;
+    height: 950px;
+    min-width: 375px;
     background-color: #fff;
-    margin-left: 14%;
-    padding-top: 3%;
+    position: relative;
   }
 
   .modal img {
     width: 80%;
     height: 250px;
     margin-left: 15%;
+    margin-right: 15px;
+    padding-top: 0;
     overflow: none;
+  }
+
+  .Desktopimg{
+    display: none;
   }
 
   .modal-box div {
@@ -1144,19 +1150,18 @@ article h1 {
   }
 
   .modal-box span {
-    width: 50px;
+    width: 100px;
     font-size: 40px;
-    height: 50px;
-    color: #172b4d;
+    height: 80px;
+    color: #fff;
     opacity: 1;
-    margin: 10px;
-    margin-right: 10px;
     float: right;
     display: flex !important;
     padding-left: 9px;
     margin-bottom: 10px;
-    top: 0;
-    right: 0;
+    top: 10%;
+    right: 8%;
+    position: relative;
   }
 
   .modalmobile button {

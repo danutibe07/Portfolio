@@ -170,18 +170,17 @@ const works = [
     listItem2: "Javascript",
     listItem3: "css",
     img: "./Images/ModalPopup.svg",     
-    close: "./Images/Vector.svg",                                                                               
-
+    mobileImg : "./Images/MobileModalPopup.svg",     
   },
 ];
 
 const showModal = function (works) {
   console.log(`close-modal-${works.id}`)
-
   modal.innerHTML = `
   <div class="modal-box">
-  <span class="close" id = "close-modal-${works.id}">&times;</span>
-  <img src="${works.img}" alt="Works-img-${works.id}" />
+  <span class="close" id = "close-modal-${works.id}"></span>
+  <img src="${works.img}" alt="Works-img-${works.id}" class="Desktopimg" />
+  <img src="${works.mobileImg}" alt="Mobile-Works-img-${works.id}" />
   <div class="modal-desc">
     <h3>Keeping track of hundreds of components</h3>
     <ul class="desktop-popup-button">
