@@ -404,19 +404,20 @@ article h1 {
   justify-items: center;
 }
 
-input, textarea{
-  border: none;
+input,
+textarea {
   outline: none;
   border: 2px solid #172b4d;
 }
 
-textarea{
+textarea {
   height: 200px !important;
 }
 
-.form{
+.form {
   margin-top: 50px !important;
 }
+
 .input-control {
   border: 2px solid #172b4d;
   border-radius: 4px;
@@ -429,6 +430,7 @@ textarea{
 input:focus {
   outline: 0;
 }
+
 .error {
   color: #b30b2d;
   font-size: 15px;
