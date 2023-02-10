@@ -28,53 +28,7 @@ navMenu.addEventListener("click", () => {
   }
 });
 
-// // localStorage
-let submitBtn = document.getElementById("submit");
-let fullName = document.getElementById("fullname");
-let email = document.getElementById("email");
-let message = document.getElementById("message");
-
-// function validateForm() {
-//   if ((fullName.value == "", email.value == "", (message.value = ""))) {
-//     alert("Name must be filled out");
-//   } else {
-//     alert("go through");
-//   }
-// }
-
-// const isValidEmail = (email) => {
-//   const re =
-//     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//   return re.test(String(email).toLowerCase());
-// };
-submitBtn.addEventListener("click", function (e) {
-  e?.preventDefault();
-  console.log(fullName?.value);
-  let fullNameError = document.getElementById("fullname-error");
-  let messageError = document.getElementById("message-error");
-  let emailError = document.getElementById("email-error");
-  if (fullName?.value?.length < 1) {
-    fullNameError.innerText = "your fullname is required";
-  } else {
-    fullNameError.innerText = " ";
-  }
-  const emailVal = email?.value;
-  if (emailVal.toLowerCase() !== emailVal) {
-    emailError.innerText = "Email must be in lower case";
-  } else if (email?.value?.length < 1) {
-    emailError.innerText = "email is required";
-  }
-  else {
-    messageError.innerText = " ";
-  }
-  if (message?.value?.length < 1) {
-    messageError.innerText = "message is required";
-  } else {
-    messageError.innerText = " ";
-  }
-  console.log(email?.value);
-  console.log(message?.value);
-});
+//  localStorage
 // submitBtn.addEventListener("click", function (e) {
 //   e.preventDefault();
 //   fullName = fullName.value;
@@ -86,26 +40,6 @@ submitBtn.addEventListener("click", function (e) {
 //    validateForm();
 //   document.getElementById("form").reset();
 // });
-
-// let modal1 = document.querySelector(".modal1")
-// let modal2 = document.querySelector(".modal2")
-
-// let modalBtn = document.querySelector("#project")
-// let span = document.getElementsByClassName("close")[0];
-
-// modalBtn.addEventListener("click", () => {
-//   modal.style.display = "block" ;
-// });
-
-// span.onclick = function() {
-//   modal.style.display = "none" ;
-// }
-
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none" ;
-//   }
-// }
 
 // About Section
 const workSection = document.querySelector(".boxes");
@@ -244,22 +178,21 @@ const showCard = function (arr) {
 
 showCard(works);
 
-
-
-//use defer to load after body
-//put ids on the form elements
-// have an err div on the top of the form
-// const form = document.getElementById('form')
-
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-
-//     const emailVal = email.value;
-
-//   if(emailVal.toLowerCase() == emailVal){
-//     form.submit();
-//   }
-//   else{
-//     message.innerHTML = 'Email must be in lower case';
-//   }
-// }) 
+//form validation
+let submitBtn = document.getElementById("submit");
+let fullName = document.getElementById("fullname");
+let email = document.getElementById("email");
+let message = document.getElementById("message");
+let contactForm = document.querySelector(".contactform")
+let errorMessage = document.getElementById("error-message")
+console.log(contactForm)
+contactForm.addEventListener("submit",  (e) => {
+  e.preventDefault() 
+  const emailValue = email.value 
+  if (emailValue === emailValue.toLowerCase()){
+   
+  }
+  else{
+    errorMessage.textContent = "email adress must not contain uppercase letter !!" ;
+  }
+})
