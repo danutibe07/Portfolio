@@ -218,6 +218,7 @@ article h1 {
 
 .box {
   height: 500px;
+
   /* background-color: #d0d9d4; */
   background-color: #fff;
   border-radius: 12px;
@@ -1338,7 +1339,7 @@ input:focus {
   }
 }
 
-.work-image{
+.work-image {
   width: 350px;
   height: 320px;
 }
