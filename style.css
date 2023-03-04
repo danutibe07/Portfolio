@@ -217,8 +217,10 @@ article h1 {
 }
 
 .box {
-  height: 480px;
-  background-color: #d0d9d4;
+  height: 500px;
+
+  /* background-color: #d0d9d4; */
+  background-color: #fff;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -226,6 +228,7 @@ article h1 {
   justify-content: space-between;
   margin: 0 auto;
   min-width: 350px;
+  padding-top: 12px;
 }
 
 .box-menu {
@@ -240,17 +243,17 @@ article h1 {
 
 .box-menu h2 {
   width: 295px;
-  height: 57px;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 32px;
+  margin-top: -25px;
   align-self: center;
 }
 
 .box-list {
   display: flex;
   flex-direction: row;
-  margin: 27px;
+  margin: 15px;
   gap: 5px;
   text-align: center;
   justify-content: center;
@@ -1334,4 +1337,9 @@ input:focus {
   .mobileimg {
     display: block;
   }
+}
+
+.work-image {
+  width: 350px;
+  height: 320px;
 }
