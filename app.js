@@ -99,29 +99,29 @@ const works = [
     source: "https://github.com/danutibe07/catalog-of-things",
   },
 
-  {
-    id: "work-5",
-    title: "Multi-Post Stories ",
-    imageSource: "",
-    listItem1: "Ruby on rails",
-    listItem2: "Javascript",
-    listItem3: "css",
-    listItem4: "webpack",
-    img: "./Images/ModalPopup.svg",
-    mobileImg: "./Images/MobileModalPopup.svg",
-  },
+  // {
+  //   id: "work-5",
+  //   title: "Multi-Post Stories ",
+  //   imageSource: "",
+  //   listItem1: "Ruby on rails",
+  //   listItem2: "Javascript",
+  //   listItem3: "css",
+  //   listItem4: "webpack",
+  //   img: "./Images/ModalPopup.svg",
+  //   mobileImg: "./Images/MobileModalPopup.svg",
+  // },
 
-  {
-    id: "work-6",
-    title: "Multi-Post Stories ",
-    imageSource: "./Images/ToDoListApp.png",
-    listItem1: "Ruby on rails",
-    listItem2: "Javascript",
-    listItem3: "css",
-    listItem4: "webpack",
-    img: "./Images/ModalPopup.svg",
-    mobileImg: "./Images/MobileModalPopup.svg",
-  },
+  // {
+  //   id: "work-6",
+  //   title: "Multi-Post Stories ",
+  //   imageSource: "./Images/ToDoListApp.png",
+  //   listItem1: "Ruby on rails",
+  //   listItem2: "Javascript",
+  //   listItem3: "css",
+  //   listItem4: "webpack",
+  //   img: "./Images/ModalPopup.svg",
+  //   mobileImg: "./Images/MobileModalPopup.svg",
+  // },
 ];
 
 //Modal
