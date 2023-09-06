@@ -2,6 +2,17 @@
 const menuButton = document.querySelector(".menu-btn");
 const navMenu = document.querySelector(".nav-menu");
 let menuOpen = false;
+
+const button = document.querySelector(".box-button");
+
+button.addEventListener("click", function () {
+  const anchor = document.createElement("a");
+  anchor.href =
+    "https://docs.google.com/document/d/18SrVvsSah8YJjMwwb7orPIgWlIAWCQ9AsgnkuNTQzUQ/edit";
+  anchor.download = "resume.pdf";
+  anchor.click();
+});
+
 menuButton.addEventListener("click", () => {
   if (!menuOpen) {
     menuButton.classList.add("open");
@@ -28,85 +39,6 @@ navMenu.addEventListener("click", () => {
   }
 });
 
-// // localStorage
-let submitBtn = document.getElementById("submit");
-let fullName = document.getElementById("fullname");
-let email = document.getElementById("email");
-let message = document.getElementById("message");
-
-// function validateForm() {
-//   if ((fullName.value == "", email.value == "", (message.value = ""))) {
-//     alert("Name must be filled out");
-//   } else {
-//     alert("go through");
-//   }
-// }
-
-// const isValidEmail = (email) => {
-//   const re =
-//     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//   return re.test(String(email).toLowerCase());
-// };
-submitBtn.addEventListener("click", function (e) {
-  e?.preventDefault();
-  console.log(fullName?.value);
-  let fullNameError = document.getElementById("fullname-error");
-  let messageError = document.getElementById("message-error");
-  let emailError = document.getElementById("email-error");
-  if (fullName?.value?.length < 1) {
-    fullNameError.innerText = "your fullname is required";
-  } else {
-    fullNameError.innerText = " ";
-  }
-  const emailVal = email?.value;
-  if (emailVal.toLowerCase() !== emailVal) {
-    emailError.innerText = "Email must be in lower case";
-  } else if (email?.value?.length < 1) {
-    emailError.innerText = "email is required";
-  }
-  else {
-    messageError.innerText = " ";
-  }
-  if (message?.value?.length < 1) {
-    messageError.innerText = "message is required";
-  } else {
-    messageError.innerText = " ";
-  }
-  console.log(email?.value);
-  console.log(message?.value);
-});
-// submitBtn.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   fullName = fullName.value;
-//   localStorage.setItem("Full Name", fullName);
-//   email = email.value;
-//   localStorage.setItem("Email", email);
-//   message = message.value;
-//   localStorage.setItem("message", message);
-//    validateForm();
-//   document.getElementById("form").reset();
-// });
-
-// let modal1 = document.querySelector(".modal1")
-// let modal2 = document.querySelector(".modal2")
-
-// let modalBtn = document.querySelector("#project")
-// let span = document.getElementsByClassName("close")[0];
-
-// modalBtn.addEventListener("click", () => {
-//   modal.style.display = "block" ;
-// });
-
-// span.onclick = function() {
-//   modal.style.display = "none" ;
-// }
-
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none" ;
-//   }
-// }
-
 // About Section
 const workSection = document.querySelector(".boxes");
 const modal = document.querySelector(".modal");
@@ -114,73 +46,87 @@ const modal = document.querySelector(".modal");
 const works = [
   {
     id: "work-1",
-    title: "Multi-Post Stories Gain+Glory",
-    imageSource: "",
-    listItem1: "Ruby on rails",
+    title: "CockTail App",
+    imageSource: "./Images/tail.png",
+    listItem1: "css",
     listItem2: "Javascript",
-    listItem3: "css",
-    img: "./Images/ModalPopup.svg",
-    mobileImg : "./Images/MobileModalPopup.svg",     
+    listItem3: "linters",
+    listItem4: "React",
+    img: "./Images/cocktailapp.png",
+    mobileImg: "./Images/cocktailapp.png",
+    live: "https://mavik-cocktail-db.netlify.app/",
+    source: "https://github.com/danutibe07/React-Cocktail-App",
   },
-
   {
     id: "work-2",
-    title: "Multi-Post Stories Gain+Glory",
-    imageSource: "",
-    listItem1: "Ruby on rails",
+    title: "ToDo List",
+    imageSource: "./Images/ToDoListApp.png",
+    listItem1: "css",
     listItem2: "Javascript",
-    listItem3: "css",
+    listItem3: "linters",
+    listItem4: "es6",
+    listItem4: "webpack",
     img: "./Images/ModalPopup.svg",
-    mobileImg : "./Images/MobileModalPopup.svg",     
+    mobileImg: "./Images/MobileModalPopup.svg",
+    live: "https://danutibe07.github.io/To-Do-List/dist/",
+    source: "https://github.com/danutibe07/To-Do-List",
   },
 
   {
     id: "work-3",
-    title: "Multi-Post Stories Gain+Glory",
-    imageSource: " ",
-    listItem1: "Ruby on rails",
-    listItem2: "Javascript",
-    listItem3: "css",
-    img: "./Images/ModalPopup.svg",
-    mobileImg : "./Images/MobileModalPopup.svg",     
+    title: "Maths Magician",
+    imageSource: "./Images/maths.jpg",
+    listItem1: "Javascript",
+    listItem2: "css",
+    listItem3: "webpack",
+    listItem4: "linters",
+    img: "./Images/mathsdis.png",
+    mobileImg: "./Images/MobileModalPopup.svg",
+    live: "https://math-magicians-pued.onrender.com/",
+    source: "https://github.com/danutibe07/math-magicians",
   },
-
   {
     id: "work-4",
-    title: "Multi-Post Stories Gain+Glory",
-    imageSource: "",
+    title: "Catalog of things",
+    imageSource: "https://m.media-amazon.com/images/I/51YBNQD30xL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_PIStarRatingFIVE%2CBottomLeft%2C360%2C-6_SR600%2C315_SCLZZZZZZZ_FMpng_BG255%2C255%2C255.jpg",
     listItem1: "Ruby on rails",
-    listItem2: "Javascript",
-    listItem3: "css",
-    img: "./Images/ModalPopup.svg",
-    mobileImg : "./Images/MobileModalPopup.svg",     
+    listItem2: "Ruby",
+    listItem3: "Linters",
+    listItem4: "webpack",
+    img: "./Images/ToDoListApp.png",
+    mobileImg: "./Images/ToDoListApp.png",
+    live: "https://github.com/danutibe07/catalog-of-things",
+    source: "https://github.com/danutibe07/catalog-of-things",
   },
 
   {
     id: "work-5",
-    title: "Multi-Post Stories Gain+Glory",
+    title: "Multi-Post Stories ",
     imageSource: "",
     listItem1: "Ruby on rails",
     listItem2: "Javascript",
     listItem3: "css",
+    listItem4: "webpack",
     img: "./Images/ModalPopup.svg",
-    mobileImg : "./Images/MobileModalPopup.svg",     
+    mobileImg: "./Images/MobileModalPopup.svg",
   },
 
   {
     id: "work-6",
-    title: "Multi-Post Stories Gain+Glory",
-    imageSource: "",
+    title: "Multi-Post Stories ",
+    imageSource: "./Images/ToDoListApp.png",
     listItem1: "Ruby on rails",
     listItem2: "Javascript",
     listItem3: "css",
-    img: "./Images/ModalPopup.svg",     
-    mobileImg : "./Images/MobileModalPopup.svg",     
+    listItem4: "webpack",
+    img: "./Images/ModalPopup.svg",
+    mobileImg: "./Images/MobileModalPopup.svg",
   },
 ];
 
+//Modal
 const showModal = function (works) {
-  console.log(`close-modal-${works.id}`)
+  console.log(`close-modal-${works.id}`);
   modal.innerHTML = `
   <div class="modal-box">
   <span class="close" id = "close-modal-${works.id}">&#10006;</span>
@@ -189,8 +135,8 @@ const showModal = function (works) {
   <div class="modal-desc">
     <h3>Keeping track of hundreds of components</h3>
     <ul class="desktop-popup-button">
-      <button class="modal-button">See Live   <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"/></svg></button>
-      <button class="modal-button">See Source <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></button>
+    <a href="${works.live}"><button class="modal-button" >See Live   <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"/></svg></button></a>
+    <a href="${works.source}"><button class="modal-button">See Source <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></button></a>
     </ul>
   </div>
   <ul class="desktop-modal-list">
@@ -208,30 +154,34 @@ const showModal = function (works) {
   </ul>
   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the release</p>
   <ul class="mobile-popup-button">
-    <button class="modal-button">See Live   <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"/></svg></button>
-    <button class="modal-button">See Source <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></button>
+  <a href="${works.live}"><button class="modal-button" >See Live   <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"/></svg></button></a>
+  <a href="${works.source}"><button class="modal-button">See Source <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></button></a>
   </ul>
 </div>  `;
   modal.style.display = "flex";
-  document.querySelector(`#close-modal-${works.id}`).addEventListener('click', ()=>{
-    modal.style.display = 'none'
-  });
+  document
+    .querySelector(`#close-modal-${works.id}`)
+    .addEventListener("click", () => {
+      modal.style.display = "none";
+    });
 };
+//Show cards in work section
 const showCard = function (arr) {
   arr.forEach((elem) => {
     workSection.insertAdjacentHTML(
       "beforeend",
       `
     <div class="box" id="box-${elem.id}" tabindex="0">
-    <div tabindex="0" class="work-image">${elem.imageSource}</div>
+    <img tabindex="0" class="work-image" src="${elem.imageSource}" alt="">
     <div class="box-menu">
       <h2 class="title" tabindex="0">${elem.title}</h2>
       <ul class="box-list">
         <li tabindex="0" class="box-list-item">${elem.listItem1}</li>
         <li tabindex="0" class="box-list-item">${elem.listItem2}</li>
         <li tabindex="0" class="box-list-item">${elem.listItem3}</li>
+        <li tabindex="0" class="box-list-item">${elem.listItem4}</li>
       </ul>
-      <button class="box-button" id = "${elem.id}-btn">See Project</button>
+      <button class="box-button" id = "${elem.id}-btn" >See Project</button>
       </div>
     </div>
     `
@@ -244,22 +194,38 @@ const showCard = function (arr) {
 
 showCard(works);
 
+//Storing data in Local Storage
+const addFormData = () => {
+  let email = document.getElementById("email");
+  let fullName = document.getElementById("fullname");
+  let message = document.getElementById("message");
+  const form = {
+    FullName: fullName.value,
+    Email: email.value,
+    Message: message.value,
+  };
+  localStorage.setItem("contact-data", JSON.stringify(form));
+  console.log(form);
+  document.querySelector("form").reset();
+};
 
-
-//use defer to load after body
-//put ids on the form elements
-// have an err div on the top of the form
-// const form = document.getElementById('form')
-
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-
-//     const emailVal = email.value;
-
-//   if(emailVal.toLowerCase() == emailVal){
-//     form.submit();
-//   }
-//   else{
-//     message.innerHTML = 'Email must be in lower case';
-//   }
-// }) 
+//form validation for forms
+let contactForm = document.querySelector(".contactform");
+let errorMessage = document.getElementById("error-message");
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let email = document.getElementById("email");
+  let fullName = document.getElementById("fullname");
+  let message = document.getElementById("message");
+  const emailValue = email.value;
+  const fullNameValue = fullName.value;
+  const messageValue = message.value;
+  if (emailValue === emailValue.toLowerCase()) {
+    errorMessage.textContent = "";
+    contactForm.submit();
+    addFormData(fullNameValue, emailValue, messageValue);
+  } else {
+    errorMessage.textContent =
+      "email adress must not contain uppercase letter !!";
+  }
+});
