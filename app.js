@@ -2,6 +2,17 @@
 const menuButton = document.querySelector(".menu-btn");
 const navMenu = document.querySelector(".nav-menu");
 let menuOpen = false;
+
+const button = document.querySelector(".box-button");
+
+button.addEventListener("click", function () {
+  const anchor = document.createElement("a");
+  anchor.href =
+    "https://docs.google.com/document/d/18SrVvsSah8YJjMwwb7orPIgWlIAWCQ9AsgnkuNTQzUQ/edit";
+  anchor.download = "resume.pdf";
+  anchor.click();
+});
+
 menuButton.addEventListener("click", () => {
   if (!menuOpen) {
     menuButton.classList.add("open");
@@ -35,52 +46,57 @@ const modal = document.querySelector(".modal");
 const works = [
   {
     id: "work-1",
-    title: "Multi-Post Stories ",
+    title: "CockTail App",
+    imageSource: "./Images/tail.png",
+    listItem1: "css",
+    listItem2: "Javascript",
+    listItem3: "linters",
+    listItem4: "React",
+    img: "./Images/cocktailapp.png",
+    mobileImg: "./Images/cocktailapp.png",
+    live: "https://mavik-cocktail-db.netlify.app/",
+    source: "https://github.com/danutibe07/React-Cocktail-App",
+  },
+  {
+    id: "work-2",
+    title: "ToDo List",
     imageSource: "./Images/ToDoListApp.png",
     listItem1: "css",
     listItem2: "Javascript",
     listItem3: "linters",
-    listItem4: "webpack",
-    img: "./Images/ToDoListApp.png",
-    mobileImg : "./Images/ToDoListApp.png",     
-    live : "https://danutibe07.github.io/To-Do-List/dist/",
-    source : "https://github.com/danutibe07/To-Do-List"
-  },
-
-  {
-    id: "work-2",
-    title: "Multi-Post Stories ",
-    imageSource: "",
-    listItem1: "Ruby on rails",
-    listItem2: "Javascript",
-    listItem3: "css",
+    listItem4: "es6",
     listItem4: "webpack",
     img: "./Images/ModalPopup.svg",
-    mobileImg : "./Images/MobileModalPopup.svg",     
+    mobileImg: "./Images/MobileModalPopup.svg",
+    live: "https://danutibe07.github.io/To-Do-List/dist/",
+    source: "https://github.com/danutibe07/To-Do-List",
   },
 
   {
     id: "work-3",
-    title: "Multi-Post Stories ",
-    imageSource: " ",
-    listItem1: "Ruby on rails",
-    listItem2: "Javascript",
-    listItem3: "css",
-    listItem4: "webpack",
-    img: "./Images/ModalPopup.svg",
-    mobileImg : "./Images/MobileModalPopup.svg",     
+    title: "Maths Magician",
+    imageSource: "./Images/maths.jpg",
+    listItem1: "Javascript",
+    listItem2: "css",
+    listItem3: "webpack",
+    listItem4: "linters",
+    img: "./Images/mathsdis.png",
+    mobileImg: "./Images/MobileModalPopup.svg",
+    live: "https://math-magicians-pued.onrender.com/",
+    source: "https://github.com/danutibe07/math-magicians",
   },
-
   {
     id: "work-4",
-    title: "Multi-Post Stories ",
-    imageSource: "",
+    title: "Catalog of things",
+    imageSource: "https://m.media-amazon.com/images/I/51YBNQD30xL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_PIStarRatingFIVE%2CBottomLeft%2C360%2C-6_SR600%2C315_SCLZZZZZZZ_FMpng_BG255%2C255%2C255.jpg",
     listItem1: "Ruby on rails",
-    listItem2: "Javascript",
-    listItem3: "css",
+    listItem2: "Ruby",
+    listItem3: "Linters",
     listItem4: "webpack",
-    img: "./Images/ModalPopup.svg",
-    mobileImg : "./Images/MobileModalPopup.svg",     
+    img: "./Images/ToDoListApp.png",
+    mobileImg: "./Images/ToDoListApp.png",
+    live: "https://github.com/danutibe07/catalog-of-things",
+    source: "https://github.com/danutibe07/catalog-of-things",
   },
 
   {
@@ -92,25 +108,25 @@ const works = [
     listItem3: "css",
     listItem4: "webpack",
     img: "./Images/ModalPopup.svg",
-    mobileImg : "./Images/MobileModalPopup.svg",     
+    mobileImg: "./Images/MobileModalPopup.svg",
   },
 
   {
     id: "work-6",
     title: "Multi-Post Stories ",
-    imageSource: "",
+    imageSource: "./Images/ToDoListApp.png",
     listItem1: "Ruby on rails",
     listItem2: "Javascript",
     listItem3: "css",
     listItem4: "webpack",
-    img: "./Images/ModalPopup.svg",     
-    mobileImg : "./Images/MobileModalPopup.svg",     
+    img: "./Images/ModalPopup.svg",
+    mobileImg: "./Images/MobileModalPopup.svg",
   },
 ];
 
 //Modal
 const showModal = function (works) {
-  console.log(`close-modal-${works.id}`)
+  console.log(`close-modal-${works.id}`);
   modal.innerHTML = `
   <div class="modal-box">
   <span class="close" id = "close-modal-${works.id}">&#10006;</span>
@@ -143,9 +159,11 @@ const showModal = function (works) {
   </ul>
 </div>  `;
   modal.style.display = "flex";
-  document.querySelector(`#close-modal-${works.id}`).addEventListener('click', ()=>{
-    modal.style.display = 'none'
-  });
+  document
+    .querySelector(`#close-modal-${works.id}`)
+    .addEventListener("click", () => {
+      modal.style.display = "none";
+    });
 };
 //Show cards in work section
 const showCard = function (arr) {
@@ -179,38 +197,35 @@ showCard(works);
 //Storing data in Local Storage
 const addFormData = () => {
   let email = document.getElementById("email");
-let fullName = document.getElementById("fullname");
-let message = document.getElementById("message");
+  let fullName = document.getElementById("fullname");
+  let message = document.getElementById("message");
   const form = {
     FullName: fullName.value,
-    Email : email.value,
+    Email: email.value,
     Message: message.value,
   };
-localStorage.setItem('contact-data', JSON.stringify(form))
-  console.log(form)
-  document.querySelector('form').reset();
+  localStorage.setItem("contact-data", JSON.stringify(form));
+  console.log(form);
+  document.querySelector("form").reset();
 };
 
-//form validation for forms 
-let contactForm = document.querySelector(".contactform")
-let errorMessage = document.getElementById("error-message")
-contactForm.addEventListener("submit",  (e) => {
-  e.preventDefault() 
+//form validation for forms
+let contactForm = document.querySelector(".contactform");
+let errorMessage = document.getElementById("error-message");
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
   let email = document.getElementById("email");
   let fullName = document.getElementById("fullname");
-let message = document.getElementById("message");
-  const emailValue = email.value; 
+  let message = document.getElementById("message");
+  const emailValue = email.value;
   const fullNameValue = fullName.value;
   const messageValue = message.value;
-  if (emailValue === emailValue.toLowerCase()){
-   errorMessage.textContent = "" ;
-    contactForm.submit() ;
-    addFormData(fullNameValue , emailValue , messageValue);
+  if (emailValue === emailValue.toLowerCase()) {
+    errorMessage.textContent = "";
+    contactForm.submit();
+    addFormData(fullNameValue, emailValue, messageValue);
+  } else {
+    errorMessage.textContent =
+      "email adress must not contain uppercase letter !!";
   }
-  else{
-    errorMessage.textContent = "email adress must not contain uppercase letter !!" ;
-  }
-})
-
-
-
+});
