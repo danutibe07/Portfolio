@@ -189,6 +189,7 @@ const showModal = function (works) {
       modal.style.display = "none";
     });
 };
+
 //Show cards in work section
 const showCard = function (arr) {
   arr.forEach((elem) => {
