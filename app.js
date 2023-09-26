@@ -114,7 +114,7 @@ const works = [
     mobileImg: "./Images/catalog.jpg",
     live: "https://github.com/danutibe07/catalog-of-things",
     source: "https://github.com/danutibe07/catalog-of-things",
-    full_details: `Introducing the 'Catalogue of Things' app, your gateway to a world of exploration and organization. This versatile app brings together various item categories, including libraries, music tracks, and more, into one convenient catalog. Dive into a seamless browsing experience where you can effortlessly discover, explore, and collect items of interest. Whether you're building your virtual library, curating your music collection, or cataloging your cherished possessions, our app simplifies the process. With powerful search and organization features, finding and managing your items has never been easier. Embrace the art of organization and exploration with the Catalogue of Things app, where your world of items is just a tap away.`
+    full_details: `Introducing the 'Catalogue of Things' app, your gateway to a world of exploration and organization. This versatile app brings together various item categories, including libraries, music tracks, and more, into one convenient catalog.`
   },
 
   {
@@ -132,18 +132,20 @@ const works = [
     full_details: `Discover the world with our comprehensive Country API app. It's your passport to a wealth of information about countries worldwide. Instantly access data on a country's currency, capital, exchange rates, and much more. Whether you're a globetrotter planning your next adventure or a financial enthusiast keeping an eye on international markets, our app has you covered. With user-friendly features and up-to-date information, you can explore the diverse aspects of any country with ease. From currency conversion to geographical insights, our app makes accessing country-specific data a breeze, empowering you to make informed decisions and satisfy your curiosity about the world.`
     
   },
-
-  // {
-  //   id: "work-6",
-  //   title: "Multi-Post Stories ",
-  //   imageSource: "./Images/ToDoListApp.png",
-  //   listItem1: "Ruby on rails",
-  //   listItem2: "Javascript",
-  //   listItem3: "css",
-  //   listItem4: "webpack",
-  //   img: "./Images/ModalPopup.svg",
-  //   mobileImg: "./Images/MobileModalPopup.svg",
-  // },
+  {
+    id: "work-6",
+    title: "GalleryVista",
+    imageSource: "https://i.pinimg.com/1200x/11/c1/20/11c1201e91eef47e2e8d19aa9dae06b1.jpg",
+    listItem1: "Next",
+    listItem2: "Javascript",
+    listItem3: "Tailwind",
+    listItem4: "Clerk",
+    img: "https://store-images.s-microsoft.com/image/apps.56442.13510798887465976.3cfa1e4f-d9ba-482e-b65b-f00e1cda8b6d.fe14729f-9789-4c07-9557-2484d67f2397",
+    mobileImg: "https://i.pinimg.com/1200x/11/c1/20/11c1201e91eef47e2e8d19aa9dae06b1.jpg",
+    live: "https://task3-hng-kkty.vercel.app/",
+    source: "https://github.com/danutibe07/task3-hng",
+    full_details: "GalleryVista is a feature-rich gallery application that combines the convenience of organizing and showcasing your images with the security of user authentication"
+  },
 ];
 
 //Modal
