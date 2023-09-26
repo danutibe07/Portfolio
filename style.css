@@ -14,6 +14,8 @@ body {
   color: #172b4d;
   background: #e5e5e5;
   overflow-x: hidden;
+  position: relative;
+  z-index: -34;
 }
 
 main {
@@ -22,6 +24,8 @@ main {
   justify-content: center;
   text-align: center;
   overflow-x: hidden;
+  z-index: -40;
+  position: relative;
 }
 
 header {
@@ -95,6 +99,17 @@ header {
   gap: 30px;
 }
 
+.menu{
+  margin-top: 20px;
+  position: fixed;
+  align-self: center;
+}
+
+.menu a:hover{
+  font-size: 27px;
+  border-bottom: 5px solid #398f40;
+}
+
 .nav-title {
   font-size: 20px;
   font-weight: 700;
@@ -117,7 +132,9 @@ button {
 
 a {
   text-decoration: none;
-  color: #172b4d;
+  color: #398f40;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 #first {
@@ -163,7 +180,7 @@ a {
 #first article {
   display: flex;
   flex-direction: column;
-  padding-top: 12rem;
+  padding-top: 8rem;
   justify-content: space-between;
 }
 
@@ -185,7 +202,6 @@ article h1 {
 
 #works {
   padding: 50px;
-  margin-top: 200px;
 }
 
 #works hr {
@@ -272,7 +288,7 @@ article h1 {
   text-align: left;
 }
 
-.box-button {
+.box-button{
   color: #fff;
   background-color: #1a563d;
   width: 122px;
@@ -282,9 +298,21 @@ article h1 {
   align-self: center;
 }
 
+#about a{
+  color: white;
+  text-decoration: none;
+  width: 200px;
+  font-size: 18px;
+  margin-top: 7px;
+  padding-top: 14px;
+  height: 50px;
+  background-color: #1a563d;
+}
+
 .box-button:hover,
 .emailaddress:hover,
-.box-button:focus {
+.box-button:focus 
+{
   background-color: #fff;
   color: #1a563d;
   box-shadow: 1px 2px #d0d9d4;
@@ -295,7 +323,6 @@ article h1 {
 #about {
   display: flex;
   flex-direction: column;
-  z-index: -1;
   position: relative;
 }
 
@@ -351,7 +378,7 @@ article h1 {
   text-align: center;
 }
 
-#about .box-button {
+#about .box-button  {
   margin: 0;
   margin-bottom: 30px;
   margin-top: 30px;
